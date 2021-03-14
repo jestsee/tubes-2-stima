@@ -1,2 +1,2 @@
 # tubes-2-stima
-Tugas besar 2 Strategi Algortimat IF2211
+Tugas besar 2 Strategi Algortima IF2211
