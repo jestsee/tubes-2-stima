@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "k+GYagCnM1VevCt/woRYHhNKuw0E2x24ZbG/8ihArZQhujdfObVNLp4LQKzZ61GYD2mH03SsQNDApKuNVoMzNQ==",
+  "dgSpecHash": "6uG/UP6o9m8keAyepI0b9M9fovwktAxo+CRyV7l4pLD3z9Lyc+fDkfqTn27G8wFRw0zb3SKZ0MTVasDZndG4EQ==",
   "success": true,
-  "projectFilePath": "C:\\sem4\\stima\\tubes 2\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\RHEA ELKA PANDUMPI\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\RHEA ELKA PANDUMPI\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\RHEA ELKA PANDUMPI\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\RHEA ELKA PANDUMPI\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\RHEA ELKA PANDUMPI\\.nuget\\packages\\microsoft.netcore.app.host.win-x86\\3.1.13\\microsoft.netcore.app.host.win-x86.3.1.13.nupkg.sha512"
+  ],
   "logs": []
 }

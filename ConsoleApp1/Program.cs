@@ -25,6 +25,22 @@ namespace tubes2stima
             _nSimpul = n;
         }
 
+
+        public LinkedList<int>[] getAdjacent()
+        {
+            return this._adj;
+        }
+
+        public Dictionary<int,string> getDictionary()
+        {
+            return this._dictionary;
+        }
+
+        public int getNSimpul()
+        {
+            return this._nSimpul;
+        }
+
         // menambahkan simpul yang bersisian
         public void addEdge(int u, int v)
         {
@@ -129,6 +145,61 @@ namespace tubes2stima
             return dictionary;
         }
 
+        public static void StartDFS(string start, string destination, Graph graph)
+        {
+            List<string> route = new List<string>();
+            var _visited = new HashSet<string>();
+            int idx = 0;
+            string value = "";
+            foreach (var a in graph.getDictionary())
+            {
+                graph.getDictionary().TryGetValue(a.Key, out value);
+                if(Equals(value,start))
+                {
+                    idx = a.Key;
+                    break;
+                }
+            }
+            DepthFirstSearch(idx, start, destination, route, graph, _visited);
+            /*for (int i=0;i<graph.getNSimpul(); i++)
+            {
+                if (_visited.Contains(destination))
+                {
+                    break;
+                }
+                else
+                {
+                    if (!_visited.Contains(graph.getDictionary()[i]))
+                    {
+                        DepthFirstSearch(i, graph.getDictionary()[i], destination, route, graph, _visited);
+                    }
+                }
+            } */
+            foreach (var a in route)
+            {
+                Console.WriteLine(a);
+            }
+        }
+
+        public static void DepthFirstSearch(int i, string start, string destination, List<string> route, Graph graph, HashSet<string> _visited)
+        {
+            _visited.Add(start);
+            if(!_visited.Contains(destination)){
+                route.Add(start);
+                foreach (var b in graph.getAdjacent()[i])
+                {
+                    if (!_visited.Contains(graph.getDictionary()[b]))
+                    {
+                        DepthFirstSearch(b, graph.getDictionary()[b], destination, route, graph, _visited);
+                    }
+                }
+            }
+            if(Equals(start,destination))
+            {
+                route.Add(destination);
+            }
+        }
+
         // Main
         public static void Main(String[] args)
         {
@@ -150,6 +221,9 @@ namespace tubes2stima
             g.generateGraph(Result);
             g.printGraph();
             Console.ReadKey();
+            // Contoh
+            StartDFS("A", "D", g);
+            // Console.WriteLine(g.getDictionary()[0]);
         }
     }
 }
