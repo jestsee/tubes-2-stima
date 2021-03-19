@@ -220,7 +220,7 @@ namespace tubes2stima
             return idxmax;
         }
 
-        public static void friendrecommendation(string Akun, int BanyakAkun, Graph graph)
+        public static void friendrecommendation(string Akun, int BanyakAkun, Graph graph, int algo)
         {
             //LinkedList<int>[] mutual = new LinkedList<int>[BanyakAkun];
             int[] BanyakMutual = new int[BanyakAkun];
@@ -282,6 +282,13 @@ namespace tubes2stima
             while (BanyakMutual[idxmax] != 0)
             {
                 Console.WriteLine("Nama Akun: " + graph.getDictionary()[idxmax]);
+                if (algo == 1) //dengan algortima DFS
+                {
+                    StartDFS(Akun, graph.getDictionary()[idxmax], graph);
+                } else
+                {
+                    //untuk BFS
+                }
                 Console.WriteLine(BanyakMutual[idxmax] + " mutual friends: ");
                 foreach (var node in graph.getAdjacent()[idx])
                 {
@@ -325,9 +332,9 @@ namespace tubes2stima
             string pengguna1 = Console.ReadLine();
             Console.Write("Masukkan nama pengguna 2 : ");
             string pengguna2 = Console.ReadLine();
-            StartDFS(pengguna1, pengguna2, g);
+            //StartDFS(pengguna1, pengguna2, g);
             int BanyakAkun = g.getNSimpul();
-            friendrecommendation(pengguna1, BanyakAkun, g);
+            friendrecommendation(pengguna1, BanyakAkun, g, 1);
             // Console.WriteLine(g.getDictionary()[0]);
             Console.ReadKey();
         }
