@@ -41,6 +41,11 @@ namespace tubes2stima
             return this._nSimpul;
         }
 
+        public int getKey(string n)
+        {
+            return(_dictionary.FirstOrDefault(x => x.Value == n).Key);
+        }
+
         // menambahkan simpul yang bersisian
         public void addEdge(int u, int v)
         {
