@@ -37,3 +37,16 @@ C:\Users\RHEA ELKA PANDUMPI\tubes-2-stima\ConsoleApp1\obj\Debug\netcoreapp3.1\Co
 C:\Users\RHEA ELKA PANDUMPI\tubes-2-stima\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.dll
 C:\Users\RHEA ELKA PANDUMPI\tubes-2-stima\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.pdb
 C:\Users\RHEA ELKA PANDUMPI\tubes-2-stima\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.genruntimeconfig.cache
+C:\Users\Hanny.LAPTOP-961D8G4P\Documents\tubes-2-stima\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.exe
+C:\Users\Hanny.LAPTOP-961D8G4P\Documents\tubes-2-stima\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.deps.json
+C:\Users\Hanny.LAPTOP-961D8G4P\Documents\tubes-2-stima\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.runtimeconfig.json
+C:\Users\Hanny.LAPTOP-961D8G4P\Documents\tubes-2-stima\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.runtimeconfig.dev.json
+C:\Users\Hanny.LAPTOP-961D8G4P\Documents\tubes-2-stima\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.dll
+C:\Users\Hanny.LAPTOP-961D8G4P\Documents\tubes-2-stima\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.pdb
+C:\Users\Hanny.LAPTOP-961D8G4P\Documents\tubes-2-stima\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csprojAssemblyReference.cache
+C:\Users\Hanny.LAPTOP-961D8G4P\Documents\tubes-2-stima\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.AssemblyInfoInputs.cache
+C:\Users\Hanny.LAPTOP-961D8G4P\Documents\tubes-2-stima\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.AssemblyInfo.cs
+C:\Users\Hanny.LAPTOP-961D8G4P\Documents\tubes-2-stima\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\Hanny.LAPTOP-961D8G4P\Documents\tubes-2-stima\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.dll
+C:\Users\Hanny.LAPTOP-961D8G4P\Documents\tubes-2-stima\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.pdb
+C:\Users\Hanny.LAPTOP-961D8G4P\Documents\tubes-2-stima\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.genruntimeconfig.cache

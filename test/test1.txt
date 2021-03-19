@@ -7,5 +7,7 @@ B F
 C F
 C G
 D G
+D F
 E H
+E F
 F H
