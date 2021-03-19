@@ -150,6 +150,7 @@ namespace tubes2stima
             List<string> route = new List<string>();
             var _visited = new HashSet<string>();
             int idx = 0;
+            int degreeConnection = 0;
             string value = "";
             foreach (var a in graph.getDictionary())
             {
@@ -161,23 +162,24 @@ namespace tubes2stima
                 }
             }
             DepthFirstSearch(idx, start, destination, route, graph, _visited);
-            /*for (int i=0;i<graph.getNSimpul(); i++)
+            if (route.Contains(destination))
             {
-                if (_visited.Contains(destination))
+                foreach (var a in route)
                 {
-                    break;
-                }
-                else
-                {
-                    if (!_visited.Contains(graph.getDictionary()[i]))
-                    {
-                        DepthFirstSearch(i, graph.getDictionary()[i], destination, route, graph, _visited);
+                    if (!Equals(a, destination)) {
+                        Console.Write(a + "->");
                     }
+                    else
+                    {
+                        Console.WriteLine(a);
+                    }
+                    degreeConnection++;
                 }
-            } */
-            foreach (var a in route)
+                Console.WriteLine(degreeConnection-2 + "-th connection"); // use converter later for st, nd, rd, th...
+            }
+            else
             {
-                Console.WriteLine(a);
+                Console.WriteLine("No connection");
             }
         }
 
@@ -220,10 +222,14 @@ namespace tubes2stima
             g.setDict(dictionary);
             g.generateGraph(Result);
             g.printGraph();
-            Console.ReadKey();
             // Contoh
-            StartDFS("A", "D", g);
+            Console.Write("Masukkan nama pengguna 1 :");
+            string pengguna1 = Console.ReadLine();
+            Console.Write("Masukkan nama pengguna 2 : ");
+            string pengguna2 = Console.ReadLine();
+            StartDFS(pengguna1, pengguna2, g);
             // Console.WriteLine(g.getDictionary()[0]);
+            Console.ReadKey();
         }
     }
 }
