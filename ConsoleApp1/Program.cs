@@ -336,6 +336,11 @@ namespace tubes2stima
             int BanyakAkun = g.getNSimpul();
             friendrecommendation(pengguna1, BanyakAkun, g, 1);
             // Console.WriteLine(g.getDictionary()[0]);
+
+            // tes bfs
+            Console.WriteLine("\ntes bfs");
+            BFSsearch test = new BFSsearch();
+            test.printBFSPath(pengguna1, pengguna2, g);
             Console.ReadKey();
         }
     }

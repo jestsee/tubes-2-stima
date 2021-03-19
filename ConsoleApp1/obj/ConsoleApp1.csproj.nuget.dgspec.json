@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hanny.LAPTOP-961D8G4P\\Documents\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj": {}
+    "C:\\sem4\\stima\\tubes 2\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hanny.LAPTOP-961D8G4P\\Documents\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj": {
+    "C:\\sem4\\stima\\tubes 2\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hanny.LAPTOP-961D8G4P\\Documents\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectUniqueName": "C:\\sem4\\stima\\tubes 2\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj",
         "projectName": "ConsoleApp1",
-        "projectPath": "C:\\Users\\Hanny.LAPTOP-961D8G4P\\Documents\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj",
-        "packagesPath": "C:\\Users\\Hanny.LAPTOP-961D8G4P\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hanny.LAPTOP-961D8G4P\\Documents\\tubes-2-stima\\ConsoleApp1\\obj\\",
+        "projectPath": "C:\\sem4\\stima\\tubes 2\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj",
+        "packagesPath": "C:\\Users\\Jesica\\.nuget\\packages\\",
+        "outputPath": "C:\\sem4\\stima\\tubes 2\\tubes-2-stima\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Hanny.LAPTOP-961D8G4P\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jesica\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
