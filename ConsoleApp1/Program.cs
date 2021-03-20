@@ -33,7 +33,7 @@ namespace tubes2stima
             g.printGraph();
             
             // Contoh
-            Console.Write("Masukkan nama pengguna 1 :");
+            Console.Write("Masukkan nama pengguna 1 : ");
             string pengguna1 = Console.ReadLine();
             Console.Write("Masukkan nama pengguna 2 : ");
             string pengguna2 = Console.ReadLine();
@@ -44,7 +44,7 @@ namespace tubes2stima
 
             // tes bfs
             Console.WriteLine("\ntes bfs");
-            List<int> path = test.printBFSPath("A", "H", g);
+            List<int> path = test.printBFSPath(pengguna1,pengguna2, g);
             Console.ReadKey();
 
             /////////////////////

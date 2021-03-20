@@ -41,7 +41,7 @@ namespace tubes2stima
 
         public int getKey(string n)
         {
-            return (_dictionary.FirstOrDefault(x => x.Value == n).Key);
+            return (_dictionary.FirstOrDefault(x => Equals(x.Value,n)).Key);
         }
 
         // menambahkan simpul yang bersisian

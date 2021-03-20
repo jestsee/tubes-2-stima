@@ -60,6 +60,9 @@ namespace tubes2stima
         {
             int s = g.getKey(start);
             int dest = g.getKey(end);
+
+            //Console.WriteLine("{0} adalah key dari pengguna 1, {1} adalah key dari pengguna 2", s, dest);
+
             int v = g.getNSimpul();
             int[] pred = new int[v];
             int[] dist = new int[v];
