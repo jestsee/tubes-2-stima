@@ -1,0 +1,17 @@
+D:\KULIAH\Stima\tubes2stima\bin\Debug\tubes2stima.exe.config
+D:\KULIAH\Stima\tubes2stima\bin\Debug\tubes2stima.exe
+D:\KULIAH\Stima\tubes2stima\bin\Debug\tubes2stima.pdb
+D:\KULIAH\Stima\tubes2stima\bin\Debug\AutomaticGraphLayout.dll
+D:\KULIAH\Stima\tubes2stima\bin\Debug\AutomaticGraphLayout.Drawing.dll
+D:\KULIAH\Stima\tubes2stima\bin\Debug\Microsoft.Msagl.GraphViewerGdi.dll
+D:\KULIAH\Stima\tubes2stima\bin\Debug\Microsoft.Msagl.WpfGraphControl.dll
+D:\KULIAH\Stima\tubes2stima\obj\Debug\tubes2stima.csprojAssemblyReference.cache
+D:\KULIAH\Stima\tubes2stima\obj\Debug\tubes2stima.Main.resources
+D:\KULIAH\Stima\tubes2stima\obj\Debug\tubes2stima.recommendation.resources
+D:\KULIAH\Stima\tubes2stima\obj\Debug\tubes2stima.Explore.resources
+D:\KULIAH\Stima\tubes2stima\obj\Debug\tubes2stima.Properties.Resources.resources
+D:\KULIAH\Stima\tubes2stima\obj\Debug\tubes2stima.csproj.GenerateResource.cache
+D:\KULIAH\Stima\tubes2stima\obj\Debug\tubes2stima.csproj.CoreCompileInputs.cache
+D:\KULIAH\Stima\tubes2stima\obj\Debug\tubes2stima.csproj.CopyComplete
+D:\KULIAH\Stima\tubes2stima\obj\Debug\tubes2stima.exe
+D:\KULIAH\Stima\tubes2stima\obj\Debug\tubes2stima.pdb
