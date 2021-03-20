@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\sem4\\stima\\tubes 2\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj": {}
+    "C:\\sem4\\stima\\tubes 2\\tubes-2-stima4\\ConsoleApp1\\ConsoleApp1.csproj": {}
   },
   "projects": {
-    "C:\\sem4\\stima\\tubes 2\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj": {
+    "C:\\sem4\\stima\\tubes 2\\tubes-2-stima4\\ConsoleApp1\\ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\sem4\\stima\\tubes 2\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectUniqueName": "C:\\sem4\\stima\\tubes 2\\tubes-2-stima4\\ConsoleApp1\\ConsoleApp1.csproj",
         "projectName": "ConsoleApp1",
-        "projectPath": "C:\\sem4\\stima\\tubes 2\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectPath": "C:\\sem4\\stima\\tubes 2\\tubes-2-stima4\\ConsoleApp1\\ConsoleApp1.csproj",
         "packagesPath": "C:\\Users\\Jesica\\.nuget\\packages\\",
-        "outputPath": "C:\\sem4\\stima\\tubes 2\\tubes-2-stima\\ConsoleApp1\\obj\\",
+        "outputPath": "C:\\sem4\\stima\\tubes 2\\tubes-2-stima4\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jesica\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,24 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutomaticGraphLayout": {
+              "target": "Package",
+              "version": "[1.1.11, )"
+            },
+            "AutomaticGraphLayout.Drawing": {
+              "target": "Package",
+              "version": "[1.1.11, )"
+            },
+            "AutomaticGraphLayout.GraphViewerGDI": {
+              "target": "Package",
+              "version": "[1.1.11, )"
+            },
+            "AutomaticGraphLayout.WpfGraphControl": {
+              "target": "Package",
+              "version": "[1.1.11, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -52,6 +70,9 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App": {
+              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"

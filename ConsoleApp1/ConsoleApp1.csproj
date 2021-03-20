@@ -1,8 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+	  <UseWpf>true</UseWpf>  
+	<UseWindowsForms>true</UseWindowsForms>  
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutomaticGraphLayout" Version="1.1.11" />
+    <PackageReference Include="AutomaticGraphLayout.Drawing" Version="1.1.11" />
+    <PackageReference Include="AutomaticGraphLayout.GraphViewerGDI" Version="1.1.11" />
+    <PackageReference Include="AutomaticGraphLayout.WpfGraphControl" Version="1.1.11" />
+  </ItemGroup>
 
 </Project>
