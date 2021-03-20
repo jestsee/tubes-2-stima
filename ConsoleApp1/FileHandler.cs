@@ -18,6 +18,7 @@ namespace tubes2stima
             var newPath = Path.GetFullPath(Path.Combine(parentDir, @"test", fileName));
             //Console.WriteLine(newPath);
             var fileContent = File.ReadAllText(newPath);
+            
             var Result = fileContent.Split((string[])null, StringSplitOptions.RemoveEmptyEntries);
             return Result;
         }

@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pKUztqGFFLXm8QMKsZcgz7svSNXaRAPjGAlI3nOizrMtx2jMpbxtoDn2Tj/bKIvTk5JgDt/WJLt1e3gMxJYruw==",
+  "dgSpecHash": "sWphzQtv+AeEtWC6TcAsMiWfBp/bHMTOqtLzQKNISrDzFqdfm0cYNQx9OT844nrieeqL6Vp4pX9UtKRfhMkHMQ==",
   "success": true,
   "projectFilePath": "C:\\sem4\\stima\\tubes 2\\tubes-2-stima4\\ConsoleApp1\\ConsoleApp1.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Jesica\\.nuget\\packages\\automaticgraphlayout\\1.1.11\\automaticgraphlayout.1.1.11.nupkg.sha512",
-    "C:\\Users\\Jesica\\.nuget\\packages\\automaticgraphlayout.drawing\\1.1.11\\automaticgraphlayout.drawing.1.1.11.nupkg.sha512",
-    "C:\\Users\\Jesica\\.nuget\\packages\\automaticgraphlayout.graphviewergdi\\1.1.11\\automaticgraphlayout.graphviewergdi.1.1.11.nupkg.sha512",
-    "C:\\Users\\Jesica\\.nuget\\packages\\automaticgraphlayout.wpfgraphcontrol\\1.1.11\\automaticgraphlayout.wpfgraphcontrol.1.1.11.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
