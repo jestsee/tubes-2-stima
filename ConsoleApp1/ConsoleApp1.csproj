@@ -1,5 +1,5 @@
 ﻿
-<!--
+
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -17,12 +17,12 @@
   </ItemGroup>
 
 </Project>
--->
+
 
 <!-- kalo mau tes programnya kayak biasa, yang di atas dijadiin comment dulu
  yang bawah di lepas simbol comment nya -->
 
-
+<!--
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -31,5 +31,5 @@
   </PropertyGroup>
 
 </Project>
-	
+-->
 

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-/*
+
 using System.Windows.Forms;
 using System.Collections.Generic;
 using Microsoft.Msagl.Core.Layout;
@@ -21,6 +21,28 @@ namespace tubes2stima
 
                 // change shape
                 Microsoft.Msagl.Drawing.Node c = graph.FindNode(node);
+                c.Attr.FillColor = Microsoft.Msagl.Drawing.Color.Crimson;
+                c.Attr.Shape = Microsoft.Msagl.Drawing.Shape.Circle;
+            }
+            viewer.Graph = graph;
+            //associate the viewer with the form 
+            form.SuspendLayout();
+            viewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            form.Controls.Add(viewer);
+            form.ResumeLayout();
+            //show the form 
+            form.ShowDialog();
+        }
+
+        public void highlightRouteDFS(List<string> route, Graph g,
+            System.Windows.Forms.Form form,
+            Microsoft.Msagl.GraphViewerGdi.GViewer viewer,
+            Microsoft.Msagl.Drawing.Graph graph)
+        {
+            for (int i = 0; i < route.Count; i++)
+            {
+                // change shape
+                Microsoft.Msagl.Drawing.Node c = graph.FindNode(route.ElementAt(i));
                 c.Attr.FillColor = Microsoft.Msagl.Drawing.Color.Crimson;
                 c.Attr.Shape = Microsoft.Msagl.Drawing.Shape.Circle;
             }
@@ -71,4 +93,4 @@ namespace tubes2stima
             form.ShowDialog();
         }
     }
-}*/
+}

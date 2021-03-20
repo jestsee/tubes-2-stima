@@ -69,3 +69,8 @@ C:\sem4\stima\tubes 2\tubes-2-stima4\ConsoleApp1\obj\Debug\netcoreapp3.1\Console
 C:\sem4\stima\tubes 2\tubes-2-stima4\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.dll
 C:\sem4\stima\tubes 2\tubes-2-stima4\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.pdb
 C:\sem4\stima\tubes 2\tubes-2-stima4\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.genruntimeconfig.cache
+C:\sem4\stima\tubes 2\tubes-2-stima4\ConsoleApp1\bin\Debug\netcoreapp3.1\AutomaticGraphLayout.dll
+C:\sem4\stima\tubes 2\tubes-2-stima4\ConsoleApp1\bin\Debug\netcoreapp3.1\AutomaticGraphLayout.Drawing.dll
+C:\sem4\stima\tubes 2\tubes-2-stima4\ConsoleApp1\bin\Debug\netcoreapp3.1\Microsoft.Msagl.GraphViewerGdi.dll
+C:\sem4\stima\tubes 2\tubes-2-stima4\ConsoleApp1\bin\Debug\netcoreapp3.1\Microsoft.Msagl.WpfGraphControl.dll
+C:\sem4\stima\tubes 2\tubes-2-stima4\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csproj.CopyComplete

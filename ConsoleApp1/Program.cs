@@ -15,7 +15,7 @@ namespace tubes2stima
             friendRecommendation fren = new friendRecommendation();
             BFSsearch test = new BFSsearch();
 
- 
+            /*
             // MEMBACA FILE EKSTERNAL
             Console.Write("Masukan nama file : ");
             string fileName = Console.ReadLine();
@@ -48,7 +48,7 @@ namespace tubes2stima
             Console.ReadKey();
 
             /////////////////////
-            /*
+            */
             //////////// TEST MSAGL //////////
             Visualization v = new Visualization();
             var Result = f.readFile("test1.txt");
@@ -71,10 +71,11 @@ namespace tubes2stima
             // create graph
             Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("ini adalah graph");
             List<int> path = test.printBFSPath("A", "H", g);
-            
+            List<string> route = dfs.StartDFS1("A", "H", g);
             v.drawGraph(Result, form, viewer, graph);
             v.highlightRouteBFS(path, g, form, viewer, graph);
-            */
+            v.highlightRouteDFS(route, g, form, viewer, graph);
+            
         }
         
     }
