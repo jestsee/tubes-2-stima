@@ -56,7 +56,7 @@ namespace tubes2stima
             return false;
         }
 
-        public void printBFSPath(string start, string end, Graph g)
+        public List<int> printBFSPath(string start, string end, Graph g)
         {
             int s = g.getKey(start);
             int dest = g.getKey(end);
@@ -64,14 +64,15 @@ namespace tubes2stima
             int[] pred = new int[v];
             int[] dist = new int[v];
             LinkedList<int>[] adj = g.getAdjacent();
+            List<int> path = new List<int>();
 
             if (BFS(adj, s, dest, g, pred, dist) == false)
             {
                 Console.WriteLine("Tidak ada jalur koneksi yang tersedia");
-                return;
+                return path;
             }
 
-            List<int> path = new List<int>();
+            
             int crawl = dest;
             path.Add(crawl);
 
@@ -91,6 +92,7 @@ namespace tubes2stima
                 Console.Write(g.getDictionary()[path[i]] + " -> ");
             }
             Console.Write(g.getDictionary()[path[0]]);
+            return path;
         }
     }
 }
