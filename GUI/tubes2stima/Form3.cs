@@ -70,18 +70,32 @@ namespace tubes2stima
                 LinkedList<int>[] adj=g.getAdjacent();
                 bfs.BFS(adj, s, dest,g,pred,dist);
                 List <int> path = bfs.printBFSPath(AkunTerpilih1,AkunTerpilih2, g);
-                Visualization vis = new Visualization();
-                vis.drawGraph(Result, form, viewer, graph);
-                vis.highlightRouteBFS(path,g,form,viewer,graph);
+                if (bfs.BFS(adj, s, dest, g, pred, dist) == false)
+                {
+                    /* Tampilkan pesan bahwa jalur tidak dapat ditemukan */
+                }
+                else
+                {
+                    Visualization vis = new Visualization();
+                    vis.drawGraph(Result, form, viewer, graph);
+                    vis.highlightRouteBFS(path,g,form,viewer,graph);
+                }
             }
             else
             {
                 DFS dfs = new DFS();
                 dfs.StartDFS(AkunTerpilih1,AkunTerpilih2,g);
                 List<string> route = dfs.StartDFS1(AkunTerpilih1, AkunTerpilih2, g);
-                Visualization vis = new Visualization();
-                vis.drawGraph(Result, form, viewer, graph);
-                vis.highlightRouteDFS(route,g,form,viewer,graph);
+                if(!route.Contains(AkunTerpilih2))
+                {
+                    /* Tampilkan pesan bahwa jalur tidak dapat ditemukan */
+                }
+                else
+                {
+                    Visualization vis = new Visualization();
+                    vis.drawGraph(Result, form, viewer, graph);
+                    vis.highlightRouteDFS(route,g,form,viewer,graph);
+                }
             }
         }
 
