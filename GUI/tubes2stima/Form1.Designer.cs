@@ -32,7 +32,7 @@ namespace tubes2stima
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.file = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.bfsbutton = new System.Windows.Forms.RadioButton();
@@ -40,8 +40,8 @@ namespace tubes2stima
             this.submit1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.recommendation = new System.Windows.Forms.Button();
             this.explore = new System.Windows.Forms.Button();
+            this.recommendation = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,13 +77,13 @@ namespace tubes2stima
             this.label2.TabIndex = 2;
             this.label2.Text = "Graph File";
             // 
-            // textBox1
+            // file
             // 
-            this.textBox1.Font = new System.Drawing.Font("NewsGoth BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(233, 106);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(332, 27);
-            this.textBox1.TabIndex = 3;
+            this.file.Font = new System.Drawing.Font("NewsGoth BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.file.Location = new System.Drawing.Point(233, 106);
+            this.file.Name = "file";
+            this.file.Size = new System.Drawing.Size(332, 27);
+            this.file.TabIndex = 3;
             // 
             // label3
             // 
@@ -166,19 +166,6 @@ namespace tubes2stima
             this.panel2.Size = new System.Drawing.Size(804, 39);
             this.panel2.TabIndex = 2;
             // 
-            // recommendation
-            // 
-            this.recommendation.BackColor = System.Drawing.Color.Firebrick;
-            this.recommendation.Font = new System.Drawing.Font("News706 BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.recommendation.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.recommendation.Location = new System.Drawing.Point(306, 2);
-            this.recommendation.Name = "recommendation";
-            this.recommendation.Size = new System.Drawing.Size(241, 34);
-            this.recommendation.TabIndex = 12;
-            this.recommendation.Text = "Friend Recommendation";
-            this.recommendation.UseVisualStyleBackColor = false;
-            this.recommendation.Click += new System.EventHandler(this.recommendation_Click);
-            // 
             // explore
             // 
             this.explore.BackColor = System.Drawing.Color.Firebrick;
@@ -192,6 +179,19 @@ namespace tubes2stima
             this.explore.UseVisualStyleBackColor = false;
             this.explore.Click += new System.EventHandler(this.explore_Click);
             // 
+            // recommendation
+            // 
+            this.recommendation.BackColor = System.Drawing.Color.Firebrick;
+            this.recommendation.Font = new System.Drawing.Font("News706 BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.recommendation.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.recommendation.Location = new System.Drawing.Point(306, 2);
+            this.recommendation.Name = "recommendation";
+            this.recommendation.Size = new System.Drawing.Size(241, 34);
+            this.recommendation.TabIndex = 12;
+            this.recommendation.Text = "Friend Recommendation";
+            this.recommendation.UseVisualStyleBackColor = false;
+            this.recommendation.Click += new System.EventHandler(this.recommendation_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,7 +204,7 @@ namespace tubes2stima
             this.Controls.Add(this.bfsbutton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.file);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -223,7 +223,7 @@ namespace tubes2stima
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox file;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton bfsbutton;

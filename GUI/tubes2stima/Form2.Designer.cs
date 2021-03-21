@@ -35,9 +35,9 @@ namespace tubes2stima
             this.label3 = new System.Windows.Forms.Label();
             this.submit1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.explore = new System.Windows.Forms.Button();
             this.Main = new System.Windows.Forms.Button();
+            this.explore = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.akun1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -112,16 +112,18 @@ namespace tubes2stima
             this.panel2.Size = new System.Drawing.Size(804, 39);
             this.panel2.TabIndex = 10;
             // 
-            // label5
+            // Main
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("News701 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(140, 6);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 23);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "GO!";
+            this.Main.BackColor = System.Drawing.Color.Firebrick;
+            this.Main.Font = new System.Drawing.Font("News706 BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Main.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Main.Location = new System.Drawing.Point(385, 3);
+            this.Main.Name = "Main";
+            this.Main.Size = new System.Drawing.Size(171, 34);
+            this.Main.TabIndex = 15;
+            this.Main.Text = "Main Menu";
+            this.Main.UseVisualStyleBackColor = false;
+            this.Main.Click += new System.EventHandler(this.Main_Click);
             // 
             // explore
             // 
@@ -136,18 +138,16 @@ namespace tubes2stima
             this.explore.UseVisualStyleBackColor = false;
             this.explore.Click += new System.EventHandler(this.explore_Click);
             // 
-            // Main
+            // label5
             // 
-            this.Main.BackColor = System.Drawing.Color.Firebrick;
-            this.Main.Font = new System.Drawing.Font("News706 BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Main.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Main.Location = new System.Drawing.Point(385, 3);
-            this.Main.Name = "Main";
-            this.Main.Size = new System.Drawing.Size(171, 34);
-            this.Main.TabIndex = 15;
-            this.Main.Text = "Main Menu";
-            this.Main.UseVisualStyleBackColor = false;
-            this.Main.Click += new System.EventHandler(this.Main_Click);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("News701 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(140, 6);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 23);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "GO!";
             // 
             // akun1
             // 

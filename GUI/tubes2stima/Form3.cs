@@ -12,19 +12,39 @@ namespace tubes2stima
 {
     public partial class Explore : Form
     {
-        public Explore()
+        //string filename;
+        Graph g;
+        Dictionary<int, string> dic;
+        string AkunTerpilih1, AkunTerpilih2;
+        int algorithm;
+        public Explore(Graph graf, Dictionary<int, string> dictionary, int algo)
         {
             InitializeComponent();
+            g = graf;
+            dic = dictionary;
+            algorithm = algo;
+            string name;
+            int Nsimpul = g.getNSimpul();
+            for (int i = 0; i < Nsimpul; i++)
+            {
+                name = dic[i];
+                akun1.Items.Add(name);
+            }
+            for (int i = 0; i < Nsimpul; i++)
+            {
+                name = dic[i];
+                akun2.Items.Add(name);
+            }
         }
 
         private void akun1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            AkunTerpilih1 = akun1.SelectedItem.ToString();
         }
 
         private void akun2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            AkunTerpilih2 = akun2.SelectedItem.ToString();
         }
 
         private void submit1_Click(object sender, EventArgs e)
@@ -41,7 +61,7 @@ namespace tubes2stima
 
         private void recommendation_Click(object sender, EventArgs e)
         {
-            recommendation recomm = new recommendation();
+            recommendation recomm = new recommendation(g, dic, algorithm);
             this.Hide();
             recomm.ShowDialog();
         }
