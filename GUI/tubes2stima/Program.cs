@@ -28,13 +28,13 @@ namespace tubes2stima
 
             string currentDir = Environment.CurrentDirectory.ToString();
             DirectoryInfo d = new DirectoryInfo(currentDir);
-            string parentDir = d.Parent.Parent.Parent.Parent.ToString();
+            string parentDir = d.Parent.Parent.Parent.Parent.Parent.ToString();
 
             // alternatif (ganti sama directory file test berada)
-            var fileContent = File.ReadAllText(@"D:\KULIAH\Stima\tubes2stima\test\" + fileName); 
+            var fileContent = File.ReadAllText(@"C:\sem4\stima\tubes 2\tubes-2-stima\test\" + fileName); 
             var newPath = Path.GetFullPath(Path.Combine(parentDir, @"test", fileName));
             //Console.WriteLine(newPath);
-            //var fileContent = File.ReadAllText(newPath);
+            // var fileContent = File.ReadAllText(newPath);
             var Result = fileContent.Split((string[])null, StringSplitOptions.RemoveEmptyEntries);
             return Result;
         }
