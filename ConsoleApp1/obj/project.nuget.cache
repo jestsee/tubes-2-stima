@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pKUztqGFFLXm8QMKsZcgz7svSNXaRAPjGAlI3nOizrMtx2jMpbxtoDn2Tj/bKIvTk5JgDt/WJLt1e3gMxJYruw==",
+  "dgSpecHash": "BneSlASHX+YMN14Kflua16e72DGUeN2PMoeUPcTag9D2jdQw/YuP3p+PUG/5KwkyplqjcroHJSPdqbtqxTYU7Q==",
   "success": true,
-  "projectFilePath": "C:\\sem4\\stima\\tubes 2\\tubes-2-stima4\\ConsoleApp1\\ConsoleApp1.csproj",
+  "projectFilePath": "C:\\sem4\\stima\\tubes 2\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jesica\\.nuget\\packages\\automaticgraphlayout\\1.1.11\\automaticgraphlayout.1.1.11.nupkg.sha512",
     "C:\\Users\\Jesica\\.nuget\\packages\\automaticgraphlayout.drawing\\1.1.11\\automaticgraphlayout.drawing.1.1.11.nupkg.sha512",

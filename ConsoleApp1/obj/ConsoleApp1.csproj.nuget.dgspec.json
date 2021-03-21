@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\sem4\\stima\\tubes 2\\tubes-2-stima4\\ConsoleApp1\\ConsoleApp1.csproj": {}
+    "C:\\sem4\\stima\\tubes 2\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj": {}
   },
   "projects": {
-    "C:\\sem4\\stima\\tubes 2\\tubes-2-stima4\\ConsoleApp1\\ConsoleApp1.csproj": {
+    "C:\\sem4\\stima\\tubes 2\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\sem4\\stima\\tubes 2\\tubes-2-stima4\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectUniqueName": "C:\\sem4\\stima\\tubes 2\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj",
         "projectName": "ConsoleApp1",
-        "projectPath": "C:\\sem4\\stima\\tubes 2\\tubes-2-stima4\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectPath": "C:\\sem4\\stima\\tubes 2\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj",
         "packagesPath": "C:\\Users\\Jesica\\.nuget\\packages\\",
-        "outputPath": "C:\\sem4\\stima\\tubes 2\\tubes-2-stima4\\ConsoleApp1\\obj\\",
+        "outputPath": "C:\\sem4\\stima\\tubes 2\\tubes-2-stima\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jesica\\AppData\\Roaming\\NuGet\\NuGet.Config",

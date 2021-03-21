@@ -50,14 +50,8 @@ namespace tubes2stima
             g.generateGraph(Result);
 
             //tampilkan visualisasi
-            // create a form 
-            Form form = new Form();
-            // create a viewer object 
-            Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
-            // create graph
-            Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("ini adalah graph");
             Visualization v = new Visualization();
-            v.drawGraph(Result, form, viewer, graph);
+            v.drawGraph(Result);
         }
 
         private void recommendation_Click(object sender, EventArgs e)

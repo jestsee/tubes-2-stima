@@ -77,8 +77,8 @@ namespace tubes2stima
                 else
                 {
                     Visualization vis = new Visualization();
-                    vis.drawGraph(Result, form, viewer, graph);
-                    vis.highlightRouteBFS(path,g,form,viewer,graph);
+                    
+                    vis.drawRoute(Result,g,path);
                 }
             }
             else
@@ -93,8 +93,7 @@ namespace tubes2stima
                 else
                 {
                     Visualization vis = new Visualization();
-                    vis.drawGraph(Result, form, viewer, graph);
-                    vis.highlightRouteDFS(route,g,form,viewer,graph);
+                    vis.drawGraph(Result);
                 }
             }
         }

@@ -31,10 +31,10 @@ namespace tubes2stima
             string parentDir = d.Parent.Parent.Parent.Parent.Parent.ToString();
 
             // alternatif (ganti sama directory file test berada)
-            var fileContent = File.ReadAllText(@"C:\Users\RHEA ELKA PANDUMPI\tubes-2-stima\test\" + fileName); 
+            var fileContent = File.ReadAllText(@"C:\sem4\stima\tubes 2\tubes-2-stima\test\" + fileName); 
             var newPath = Path.GetFullPath(Path.Combine(parentDir, @"test", fileName));
             //Console.WriteLine(newPath);
-            // var fileContent = File.ReadAllText(newPath);
+            //var fileContent = File.ReadAllText(newPath);
             var Result = fileContent.Split((string[])null, StringSplitOptions.RemoveEmptyEntries);
             return Result;
         }
@@ -164,6 +164,17 @@ namespace tubes2stima
             }
 
         }
+
+        public List<(string, string)> edgeTuple(List<string> stringpath)
+        {
+            int n = stringpath.Count;
+            List<(string, string)> tup = new List<(string, string)>();
+            for (int i = 0; i < n; i += 2)
+            {
+                tup.Add((stringpath[i], stringpath[i + 1]));
+            }
+            return tup;
+        }
     }
 
     class BFSsearch
@@ -238,7 +249,7 @@ namespace tubes2stima
                 return path;
             }
 
-
+            
             int crawl = dest;
             path.Add(crawl);
 
@@ -259,6 +270,28 @@ namespace tubes2stima
             }
             Console.Write(g.getDictionary()[path[0]]);
             return path;
+        }
+
+        public List<string> getStringPath(List<int> intpath, Graph g)
+        {
+            List<string> stringpath = new List<string>();
+            foreach (var i in intpath)
+            {
+                stringpath.Add(g.getDictionary()[i]);
+            }
+            stringpath.Reverse();
+            return stringpath;
+        }
+
+        public List<(string,string)> listOfPath (List<string> stringpath)
+        {
+            int n = stringpath.Count;
+            List<(string, string)> tup = new List<(string, string)>();
+            for(int i=0; i<n-1; i++)
+            {
+                tup.Add((stringpath[i], stringpath[i + 1]));
+            }
+            return tup;
         }
     }
 
@@ -482,11 +515,14 @@ namespace tubes2stima
             {
                 string node = g.getDictionary()[path.ElementAt(i)];
 
-                // change shape
+                // highlight node
                 Microsoft.Msagl.Drawing.Node c = graph.FindNode(node);
                 c.Attr.FillColor = Microsoft.Msagl.Drawing.Color.Crimson;
                 c.Attr.Shape = Microsoft.Msagl.Drawing.Shape.Circle;
             }
+
+
+
             viewer.Graph = graph;
             //associate the viewer with the form 
             form.SuspendLayout();
@@ -497,17 +533,54 @@ namespace tubes2stima
             form.ShowDialog();
         }
 
-        public void highlightRouteDFS(List<string> route, Graph g,
-            System.Windows.Forms.Form form,
-            Microsoft.Msagl.GraphViewerGdi.GViewer viewer,
-            Microsoft.Msagl.Drawing.Graph graph)
+        public void drawRoute(string[] mentah, Graph g, List<int> bfsint)
         {
-            for (int i = 0; i < route.Count; i++)
+            BFSsearch test = new BFSsearch();
+            List<string> test2 = test.getStringPath(bfsint, g);
+            var lp = test.listOfPath(test2);
+
+            List<string> stringmentah = new List<string>(mentah);
+            var lp2 = g.edgeTuple(stringmentah);
+
+            // create a form 
+            System.Windows.Forms.Form form = new System.Windows.Forms.Form();
+            // create a viewer object 
+            Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
+            // create graph
+            Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("ini adalah graph");
+
+            foreach (var i in lp2)
             {
-                // change shape
-                Microsoft.Msagl.Drawing.Node c = graph.FindNode(route.ElementAt(i));
-                c.Attr.FillColor = Microsoft.Msagl.Drawing.Color.Crimson;
-                c.Attr.Shape = Microsoft.Msagl.Drawing.Shape.Circle;
+                var tempEdge = graph.AddEdge(i.Item1, i.Item2);
+                tempEdge.Attr.ArrowheadAtTarget = ArrowStyle.None;
+                tempEdge.Attr.ArrowheadAtSource = ArrowStyle.None;
+                if (lp.Contains(i))
+                {
+                    tempEdge.Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
+                }
+                else
+                {
+                    tempEdge.Attr.Color = Microsoft.Msagl.Drawing.Color.Black;
+                }
+
+            }
+
+            for (int i = 0; i < g.getNSimpul(); i++)
+            {
+                string node = g.getDictionary()[i];
+                Microsoft.Msagl.Drawing.Node c = graph.FindNode(node);
+
+                if (!bfsint.Contains(i))
+                {
+                    c.Attr.FillColor = Color.AntiqueWhite;
+                    c.Attr.Shape = Shape.Circle;
+                }
+                else
+                {
+                    c.Attr.FillColor = Color.Red;
+                    c.Attr.Shape = Shape.Circle;
+                }
+
             }
             viewer.Graph = graph;
             //associate the viewer with the form 
@@ -517,21 +590,83 @@ namespace tubes2stima
             form.ResumeLayout();
             //show the form 
             form.ShowDialog();
+
         }
 
-        public void drawGraph(string[] result,
-            System.Windows.Forms.Form form,
-            Microsoft.Msagl.GraphViewerGdi.GViewer viewer,
-            Microsoft.Msagl.Drawing.Graph graph)
+        public void drawRoute(string[] mentah,
+            Graph g, List<string> route)
+        {
+            BFSsearch test = new BFSsearch();
+            var lp = test.listOfPath(route);
+
+            List<string> stringmentah = new List<string>(mentah);
+            var lp2 = g.edgeTuple(stringmentah);
+
+            // create a form 
+            System.Windows.Forms.Form form = new System.Windows.Forms.Form();
+            // create a viewer object 
+            Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
+            // create graph
+            Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("ini adalah graph");
+
+            foreach (var i in lp2)
+            {
+                var tempEdge = graph.AddEdge(i.Item1, i.Item2);
+                tempEdge.Attr.ArrowheadAtTarget = ArrowStyle.None;
+                tempEdge.Attr.ArrowheadAtSource = ArrowStyle.None;
+                if (lp.Contains(i))
+                {
+                    tempEdge.Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
+                }
+                else
+                {
+                    tempEdge.Attr.Color = Microsoft.Msagl.Drawing.Color.Black;
+                }
+
+            }
+            /*
+            for (int i = 0; i < g.getNSimpul(); i++)
+            {
+                string node = g.getDictionary()[i];
+                Microsoft.Msagl.Drawing.Node c = graph.FindNode(node);
+
+                if (!bfsint.Contains(i))
+                {
+                    c.Attr.FillColor = Microsoft.Msagl.Drawing.Color.AntiqueWhite;
+                    c.Attr.Shape = Microsoft.Msagl.Drawing.Shape.Circle;
+                }
+                else
+                {
+                    c.Attr.FillColor = Microsoft.Msagl.Drawing.Color.Red;
+                    c.Attr.Shape = Microsoft.Msagl.Drawing.Shape.Circle;
+                }
+
+            }*/
+            viewer.Graph = graph;
+            //associate the viewer with the form 
+            form.SuspendLayout();
+            viewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            form.Controls.Add(viewer);
+            form.ResumeLayout();
+            //show the form 
+            form.ShowDialog();
+
+        }
+
+        public void drawGraph(string[] result)
         {
             List<string> list = new List<string>(result);
             var n = list.Count;
-
+            // create a form 
+            System.Windows.Forms.Form form = new System.Windows.Forms.Form();
+            // create a viewer object 
+            Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
+            // create graph
+            Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("ini adalah graph");
 
             for (int i = 0; i < n; i += 2)
             {
                 var Edge = graph.AddEdge(list.ElementAt(i), list.ElementAt(i + 1));
-
                 // undirect graph
                 Edge.Attr.ArrowheadAtTarget = ArrowStyle.None;
                 Edge.Attr.ArrowheadAtSource = ArrowStyle.None;
@@ -555,8 +690,31 @@ namespace tubes2stima
             //show the form 
             form.ShowDialog();
         }
-    }
 
+        public Microsoft.Msagl.Drawing.Edge findEdge(string src, string target,
+            Microsoft.Msagl.Drawing.Graph graph)
+        {
+            Microsoft.Msagl.Drawing.Node srcNode = graph.FindNode(src);
+            Microsoft.Msagl.Drawing.Node targetNode = graph.FindNode(target);
+
+            // inisialisasi edge
+            Microsoft.Msagl.Drawing.Edge de = null;
+
+            // find edge
+            foreach (Microsoft.Msagl.Drawing.Edge e in srcNode.Edges)
+            {
+                foreach (Microsoft.Msagl.Drawing.Edge ed in targetNode.Edges)
+                {
+                    if (Equals(e, ed))
+                    {
+                        de = e;
+                        break;
+                    }
+                }
+            }
+            return de;
+        }
+    }
     static class Program
     {
         /// <summary>
