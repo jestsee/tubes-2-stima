@@ -12,16 +12,17 @@ namespace tubes2stima
 {
     public partial class recommendation : Form
     {
-       // string filename;
+       string fn;
         Graph g;
         Dictionary<int, string> dic;
         string AkunTerpilih;
         int algorithm;
-        public recommendation(Graph graf, Dictionary<int, string> dictionary, int algo)
+        public recommendation(Graph graf, Dictionary<int, string> dictionary, int algo, string f)
         {
             InitializeComponent();
             g = graf;
             dic = dictionary;
+            fn=f;
             //test.Text = file;
             string name;
             algorithm = algo;
@@ -35,7 +36,7 @@ namespace tubes2stima
 
         private void explore_Click(object sender, EventArgs e)
         {
-            Explore explore = new Explore(g, dic, algorithm);
+            Explore explore = new Explore(g, dic, algorithm, fn);
             this.Hide();
             explore.ShowDialog();
         }

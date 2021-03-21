@@ -31,7 +31,7 @@ namespace tubes2stima
             string parentDir = d.Parent.Parent.Parent.Parent.Parent.ToString();
 
             // alternatif (ganti sama directory file test berada)
-            var fileContent = File.ReadAllText(@"C:\Users\Hanny.LAPTOP-961D8G4P\Documents\tubes-2-stima\GUI\tubes2stima\test\" + fileName); 
+            var fileContent = File.ReadAllText(@"C:\Users\RHEA ELKA PANDUMPI\tubes-2-stima\test\" + fileName); 
             var newPath = Path.GetFullPath(Path.Combine(parentDir, @"test", fileName));
             //Console.WriteLine(newPath);
             // var fileContent = File.ReadAllText(newPath);

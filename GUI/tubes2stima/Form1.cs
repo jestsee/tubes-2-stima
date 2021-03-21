@@ -62,14 +62,14 @@ namespace tubes2stima
 
         private void recommendation_Click(object sender, EventArgs e)
         {
-            recommendation recomm = new recommendation(g, dictionary, algotithm);
+            recommendation recomm = new recommendation(g, dictionary, algotithm, filename);
             this.Hide();
             recomm.ShowDialog();
         }
 
         private void explore_Click(object sender, EventArgs e)
         {
-            Explore explore = new Explore(g, dictionary, algotithm);
+            Explore explore = new Explore(g, dictionary, algotithm,filename);
             this.Hide();
             explore.ShowDialog();
         }
