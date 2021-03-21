@@ -49,7 +49,9 @@ namespace tubes2stima
 
         private void submit1_Click(object sender, EventArgs e)
         {
+            //lakukan pencarian
 
+            //tampilkan visualisasi hasil pencarian
         }
 
         private void Main_Click(object sender, EventArgs e)

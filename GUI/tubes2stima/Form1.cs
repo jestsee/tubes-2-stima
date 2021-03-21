@@ -73,5 +73,10 @@ namespace tubes2stima
             this.Hide();
             explore.ShowDialog();
         }
+
+        private void menuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

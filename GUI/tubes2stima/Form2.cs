@@ -49,12 +49,15 @@ namespace tubes2stima
 
         private void submit1_Click(object sender, EventArgs e)
         {
-            
+            //lakukan pencarian
+
+            //tampilkan hasil pencarian
         }
 
         private void akun1_SelectedIndexChanged(object sender, EventArgs e)
         {
             AkunTerpilih = akun1.SelectedItem.ToString();
         }
+
     }
 }
