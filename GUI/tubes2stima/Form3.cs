@@ -93,7 +93,7 @@ namespace tubes2stima
                 else
                 {
                     Visualization vis = new Visualization();
-                    vis.drawGraph(Result);
+                    vis.drawRoute(Result,g,route);
                 }
             }
         }

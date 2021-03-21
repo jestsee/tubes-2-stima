@@ -593,8 +593,7 @@ namespace tubes2stima
 
         }
 
-        public void drawRoute(string[] mentah,
-            Graph g, List<string> route)
+        public void drawRoute(string[] mentah, Graph g, List<string> route)
         {
             BFSsearch test = new BFSsearch();
             var lp = test.listOfPath(route);
@@ -614,7 +613,8 @@ namespace tubes2stima
                 var tempEdge = graph.AddEdge(i.Item1, i.Item2);
                 tempEdge.Attr.ArrowheadAtTarget = ArrowStyle.None;
                 tempEdge.Attr.ArrowheadAtSource = ArrowStyle.None;
-                if (lp.Contains(i))
+                if (lp.Contains(i) ||
+                    lp.Contains((i.Item2, i.Item1)))
                 {
                     tempEdge.Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
                 }
@@ -624,7 +624,13 @@ namespace tubes2stima
                 }
 
             }
-            /*
+
+            List<int> bfsint = new List<int>();
+            foreach(var i in route)
+            {
+                bfsint.Add(g.getKey(i));
+            }
+
             for (int i = 0; i < g.getNSimpul(); i++)
             {
                 string node = g.getDictionary()[i];
@@ -641,7 +647,7 @@ namespace tubes2stima
                     c.Attr.Shape = Microsoft.Msagl.Drawing.Shape.Circle;
                 }
 
-            }*/
+            }
             viewer.Graph = graph;
             //associate the viewer with the form 
             form.SuspendLayout();
