@@ -533,7 +533,7 @@ namespace tubes2stima
             form.ShowDialog();
         }
 
-        public void drawRoute(string[] mentah, Graph g, List<int> bfsint)
+        public void drawRoute(string[] mentah, Graph g, List<int> bfsint, Form form)
         {
             BFSsearch test = new BFSsearch();
             List<string> test2 = test.getStringPath(bfsint, g);
@@ -543,7 +543,7 @@ namespace tubes2stima
             var lp2 = g.edgeTuple(stringmentah);
 
             // create a form 
-            System.Windows.Forms.Form form = new System.Windows.Forms.Form();
+            //System.Windows.Forms.Form form = new System.Windows.Forms.Form();
             // create a viewer object 
             Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
             // create graph
@@ -593,7 +593,7 @@ namespace tubes2stima
 
         }
 
-        public void drawRoute(string[] mentah, Graph g, List<string> route)
+        public void drawRoute(string[] mentah, Graph g, List<string> route, Form f)
         {
             BFSsearch test = new BFSsearch();
             var lp = test.listOfPath(route);
@@ -650,12 +650,12 @@ namespace tubes2stima
             }
             viewer.Graph = graph;
             //associate the viewer with the form 
-            form.SuspendLayout();
+            f.SuspendLayout();
             viewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            form.Controls.Add(viewer);
-            form.ResumeLayout();
+            f.Controls.Add(viewer);
+            f.ResumeLayout();
             //show the form 
-            form.ShowDialog();
+            f.ShowDialog();
 
         }
 

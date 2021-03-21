@@ -56,7 +56,7 @@ namespace tubes2stima
             g = new Graph(N);
             g.setDict(dic);
             g.generateGraph(Result); 
-            Form form = new Form();
+            Explore form = new Explore(g,dic,2,fn);
             Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
             Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("ini adalah graph");
             if(algorithm==1)
@@ -78,7 +78,8 @@ namespace tubes2stima
                 {
                     Visualization vis = new Visualization();
                     
-                    vis.drawRoute(Result,g,path);
+                    vis.drawRoute(Result,g,path,form);
+                    this.Hide();
                 }
             }
             else
@@ -93,7 +94,8 @@ namespace tubes2stima
                 else
                 {
                     Visualization vis = new Visualization();
-                    vis.drawRoute(Result,g,route);
+                    this.Hide();
+                    vis.drawRoute(Result,g,route,form);
                 }
             }
         }

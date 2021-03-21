@@ -51,7 +51,9 @@ namespace tubes2stima
 
             //tampilkan visualisasi
             Visualization v = new Visualization();
+            Main main = new Main();
             v.drawGraph(Result);
+            //this.Hide();
         }
 
         private void recommendation_Click(object sender, EventArgs e)
