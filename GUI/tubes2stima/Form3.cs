@@ -20,6 +20,7 @@ namespace tubes2stima
         public Explore(Graph graf, Dictionary<int, string> dictionary, int algo, string filename)
         {
             InitializeComponent();
+            textBox1.Visible = false;
             g = graf;
             dic = dictionary;
             algorithm = algo;
@@ -72,7 +73,8 @@ namespace tubes2stima
                 List <int> path = bfs.printBFSPath(AkunTerpilih1,AkunTerpilih2, g);
                 if (bfs.BFS(adj, s, dest, g, pred, dist) == false)
                 {
-                    /* Tampilkan pesan bahwa jalur tidak dapat ditemukan */
+                    textBox1.AppendText("No path to make a connection");
+                    textBox1.Visible = true;
                 }
                 else
                 {
@@ -89,7 +91,8 @@ namespace tubes2stima
                 List<string> route = dfs.StartDFS1(AkunTerpilih1, AkunTerpilih2, g);
                 if(!route.Contains(AkunTerpilih2))
                 {
-                    /* Tampilkan pesan bahwa jalur tidak dapat ditemukan */
+                    textBox1.AppendText("No path to make a connection");
+                    textBox1.Visible = true;
                 }
                 else
                 {
@@ -105,6 +108,11 @@ namespace tubes2stima
             Main main = new Main();
             this.Hide();
             main.ShowDialog();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void recommendation_Click(object sender, EventArgs e)

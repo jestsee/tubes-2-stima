@@ -12,7 +12,7 @@ namespace tubes2stima
 {
     public partial class recommendation : Form
     {
-       string fn;
+        string fn;
         Graph g;
         Dictionary<int, string> dic;
         string AkunTerpilih;
@@ -20,9 +20,10 @@ namespace tubes2stima
         public recommendation(Graph graf, Dictionary<int, string> dictionary, int algo, string f)
         {
             InitializeComponent();
+            textBox1.Visible = false;
             g = graf;
             dic = dictionary;
-            fn=f;
+            fn = f;
             //test.Text = file;
             string name;
             algorithm = algo;
@@ -50,9 +51,12 @@ namespace tubes2stima
 
         private void submit1_Click(object sender, EventArgs e)
         {
-            //lakukan pencarian
-
-            //tampilkan hasil pencarian
+            int Nsimpul = g.getNSimpul();
+            friendRecommendation fR = new friendRecommendation();
+            string message = fR.friendrecommendation(AkunTerpilih, Nsimpul, g, algorithm);
+            textBox1.AppendText(message);
+            textBox1.AppendText(Environment.NewLine);
+            textBox1.Visible = true;
         }
 
         private void akun1_SelectedIndexChanged(object sender, EventArgs e)

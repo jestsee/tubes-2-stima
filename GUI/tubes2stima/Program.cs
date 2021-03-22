@@ -31,7 +31,7 @@ namespace tubes2stima
             string parentDir = d.Parent.Parent.Parent.Parent.Parent.ToString();
 
             // alternatif (ganti sama directory file test berada)
-            var fileContent = File.ReadAllText(@"C:\sem4\stima\tubes 2\tubes-2-stima\test\" + fileName); 
+            var fileContent = File.ReadAllText(@"C:\Users\RHEA ELKA PANDUMPI\tubes-2-stima\test\" + fileName);
             var newPath = Path.GetFullPath(Path.Combine(parentDir, @"test", fileName));
             //Console.WriteLine(newPath);
             //var fileContent = File.ReadAllText(newPath);
@@ -412,10 +412,10 @@ namespace tubes2stima
             return idxmax;
         }
 
-        public void friendrecommendation(string Akun, int BanyakAkun, Graph graph, int algo)
+        public string friendrecommendation(string Akun, int BanyakAkun, Graph graph, int algo)
         {
             DFS dfs = new DFS();
-
+            string message = "";
             //LinkedList<int>[] mutual = new LinkedList<int>[BanyakAkun];
             int[] BanyakMutual = new int[BanyakAkun];
             int idx = 0;
@@ -471,20 +471,27 @@ namespace tubes2stima
             //}
 
             //ambil dari nilai yang terbesar
-            Console.WriteLine("Daftar rekomendasi teman untuk akun " + graph.getDictionary()[idx] + ":");
+            BFSsearch bfs = new BFSsearch();
+            int v = graph.getNSimpul();
+            int [] pred = new int[v];
+            int [] dist = new int [v];
+            LinkedList<int>[] adj=graph.getAdjacent();
+            int s = graph.getKey(Akun);
+            message = message + "Daftar rekomendasi teman untuk akun " + graph.getDictionary()[idx] + ":\n";
             int idxmax = GetMax(BanyakMutual, BanyakAkun);
             while (BanyakMutual[idxmax] != 0)
             {
-                Console.WriteLine("Nama Akun: " + graph.getDictionary()[idxmax]);
-                if (algo == 1) //dengan algortima DFS
+                message = message + "Nama Akun: " + graph.getDictionary()[idxmax];
+                if (algo == 1) //dengan algortima BFS
                 {
-                    dfs.StartDFS(Akun, graph.getDictionary()[idxmax], graph);
+                    int dest = graph.getKey(graph.getDictionary()[idxmax]);
+                    bfs.BFS(adj, s, dest,graph,pred,dist);
                 }
                 else
                 {
-                    //untuk BFS
+                    dfs.StartDFS(Akun, graph.getDictionary()[idxmax], graph);
                 }
-                Console.WriteLine(BanyakMutual[idxmax] + " mutual friends: ");
+                message = message + BanyakMutual[idxmax] + " mutual friends: \n";
                 foreach (var node in graph.getAdjacent()[idx])
                 {
                     foreach (var node2 in graph.getAdjacent()[idxmax])
@@ -492,16 +499,15 @@ namespace tubes2stima
                         if (node == node2 && node2 != idx)
                         {
 
-                            Console.WriteLine(graph.getDictionary()[node2]);
+                            message = message + graph.getDictionary()[node2];
                         }
                     }
                 }
                 BanyakMutual[idxmax] = 0;
                 idxmax = GetMax(BanyakMutual, BanyakAkun);
-
             }
+            return message;
         }
-
     }
 
     class Visualization
