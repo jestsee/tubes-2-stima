@@ -81,9 +81,14 @@ namespace tubes2stima
                 else
                 {
                     Visualization vis = new Visualization();
-                    
-                    vis.drawRoute(Result,g,path,form);
-                    this.Hide();
+                    string message=bfs.showMessageBFS(adj, s, dest, g, pred, dist);
+                    double deg = dist[dest];
+                    message = message + "," + (Math.Ceiling(deg / 2)) + "-th degree)\r\n";
+                    textBox1.AppendText(message);
+                    textBox1.Visible = true;
+                    textBox1.ReadOnly = true;
+                    //this.Hide();
+                    vis.drawRoute(Result, g, path, form);
                 }
             }
             else
@@ -94,14 +99,18 @@ namespace tubes2stima
                 if(!route.Contains(AkunTerpilih2))
                 {
                     textBox1.AppendText("No path to make a connection");
-                    textBox1.Visible = true;
-                    textBox1.ScrollBars = ScrollBars.Vertical;
+                    //textBox1.Visible = true;
+                    //textBox1.ScrollBars = ScrollBars.Vertical;
                     textBox1.ReadOnly = true;
                 }
                 else
                 {
                     Visualization vis = new Visualization();
-                    this.Hide();
+                    string message=dfs.showMessageDFS(AkunTerpilih1,AkunTerpilih2,g);
+                    textBox1.AppendText(message);
+                    textBox1.Visible = true;
+                    textBox1.ReadOnly = true;
+                    //this.Hide();
                     vis.drawRoute(Result,g,route,form);
                 }
             }
@@ -115,6 +124,11 @@ namespace tubes2stima
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

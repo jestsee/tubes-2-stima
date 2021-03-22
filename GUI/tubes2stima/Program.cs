@@ -294,6 +294,22 @@ namespace tubes2stima
             }
             return tup;
         }
+        public string showMessageBFS(LinkedList<int>[] adj, int start, int end, Graph g, int[] p, int[] d)
+        {
+            string message="(";
+            int v = g.getNSimpul();
+            int [] pred = new int[v];
+            int [] dist = new int [v];
+            double deg = dist[end];
+            List<int> path = printBFSPath(g.getDictionary()[start], g.getDictionary()[end], g);
+            for (int i =path.Count-1; i > 0; i--)
+            {
+                message = message + g.getDictionary()[path[i]] + " -> ";
+            }
+            message = message + g.getDictionary()[path[0]];
+            return message;
+        }
+
     }
 
     class DFS
@@ -396,6 +412,25 @@ namespace tubes2stima
                 route.Add(destination);
             }
         }
+        public string showMessageDFS(string start, string destination, Graph graph)
+        {
+            string message="";
+            int degreeConnection = 0;
+            message = message + "(";
+            foreach (var a in StartDFS1(start, destination, graph))
+            {
+                if (!Equals(a, destination))
+                {
+                    message = message + a + "->";
+                }
+                else
+                {
+                    message = message + a +"," + degreeConnection + "-th degree)\r\n";
+                }
+                degreeConnection++;
+            }
+            return message;
+        }
     }
 
     class friendRecommendation
@@ -485,36 +520,18 @@ namespace tubes2stima
                 message = message + "\r\nNama Akun: \r\n" + graph.getDictionary()[idxmax] ;
                 if (algo == 1) //dengan algortima BFS
                 {
-                    message = message + "(";
                     int dest = graph.getKey(graph.getDictionary()[idxmax]);
                     bfs.BFS(adj, s, dest, graph, pred, dist);
-                    double deg = dist[dest];
                     // Print path
-                    List<int> path = bfs.printBFSPath(Akun, graph.getDictionary()[idxmax], graph);
-                    for (int i =path.Count-1; i > 0; i--)
-                    {
-                        message = message + graph.getDictionary()[path[i]] + " -> ";
-                    }
-                    message = message + graph.getDictionary()[path[0]];
-                    message = message + "," + (Math.Ceiling(deg / 2)) + "-th degree)\r\n";
+                    double deg = dist[dest];
+                    string c = bfs.showMessageBFS(adj, s, dest, graph, pred, dist);
+                    message = message + c + "," + (Math.Ceiling(deg / 2)) + "-th degree)\r\n";
                 }
                 else
                 {
                     dfs.StartDFS(Akun, graph.getDictionary()[idxmax], graph);
-                    int degreeConnection = 0;
-                    message = message + "(";
-                    foreach (var a in dfs.StartDFS1(Akun, graph.getDictionary()[idxmax], graph))
-                    {
-                        if (!Equals(a, graph.getDictionary()[idxmax]))
-                        {
-                            message = message + a + "->";
-                        }
-                        else
-                        {
-                            message = message + a +"," + degreeConnection + "-th degree)\r\n";
-                        }
-                        degreeConnection++;
-                    }
+                    string c = dfs.showMessageDFS(Akun, graph.getDictionary()[idxmax], graph);
+                    message = message + c;
                 }
                 message = message + BanyakMutual[idxmax] + " mutual friends: \r\n";
                 foreach (var node in graph.getAdjacent()[idx])
@@ -687,7 +704,6 @@ namespace tubes2stima
             f.ResumeLayout();
             //show the form 
             f.ShowDialog();
-
         }
 
         public void drawGraph(string[] result)
