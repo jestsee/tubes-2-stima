@@ -477,21 +477,45 @@ namespace tubes2stima
             int [] dist = new int [v];
             LinkedList<int>[] adj=graph.getAdjacent();
             int s = graph.getKey(Akun);
-            message = message + "Daftar rekomendasi teman untuk akun " + graph.getDictionary()[idx] + ":\n";
+            message = message + "Daftar rekomendasi teman untuk akun " + graph.getDictionary()[idx] + ":\r\n";
             int idxmax = GetMax(BanyakMutual, BanyakAkun);
             while (BanyakMutual[idxmax] != 0)
             {
-                message = message + "Nama Akun: " + graph.getDictionary()[idxmax];
+                message = message + "\r\nNama Akun: \r\n" + graph.getDictionary()[idxmax] ;
                 if (algo == 1) //dengan algortima BFS
                 {
+                    message = message + "(";
                     int dest = graph.getKey(graph.getDictionary()[idxmax]);
-                    bfs.BFS(adj, s, dest,graph,pred,dist);
+                    bfs.BFS(adj, s, dest, graph, pred, dist);
+                    double deg = dist[dest];
+                    // Print path
+                    List<int> path = bfs.printBFSPath(Akun, graph.getDictionary()[idxmax], graph);
+                    for (int i =path.Count-1; i > 0; i--)
+                    {
+                        message = message + graph.getDictionary()[path[i]] + " -> ";
+                    }
+                    message = message + graph.getDictionary()[path[0]];
+                    message = message + "," + (Math.Ceiling(deg / 2)) + "-th degree)\r\n";
                 }
                 else
                 {
                     dfs.StartDFS(Akun, graph.getDictionary()[idxmax], graph);
+                    int degreeConnection = 0;
+                    message = message + "(";
+                    foreach (var a in dfs.StartDFS1(Akun, graph.getDictionary()[idxmax], graph))
+                    {
+                        if (!Equals(a, graph.getDictionary()[idxmax]))
+                        {
+                            message = message + a + "->";
+                        }
+                        else
+                        {
+                            message = message + a +"," + degreeConnection + "-th degree)\r\n";
+                        }
+                        degreeConnection++;
+                    }
                 }
-                message = message + BanyakMutual[idxmax] + " mutual friends: \n";
+                message = message + BanyakMutual[idxmax] + " mutual friends: \r\n";
                 foreach (var node in graph.getAdjacent()[idx])
                 {
                     foreach (var node2 in graph.getAdjacent()[idxmax])

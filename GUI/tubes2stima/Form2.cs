@@ -54,8 +54,7 @@ namespace tubes2stima
             int Nsimpul = g.getNSimpul();
             friendRecommendation fR = new friendRecommendation();
             string message = fR.friendrecommendation(AkunTerpilih, Nsimpul, g, algorithm);
-            textBox1.AppendText(message);
-            textBox1.AppendText(Environment.NewLine);
+            textBox1.Text = message;
             textBox1.Visible = true;
         }
 
