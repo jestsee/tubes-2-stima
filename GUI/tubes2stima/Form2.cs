@@ -56,6 +56,8 @@ namespace tubes2stima
             string message = fR.friendrecommendation(AkunTerpilih, Nsimpul, g, algorithm);
             textBox1.Text = message;
             textBox1.Visible = true;
+            textBox1.ScrollBars = ScrollBars.Vertical;
+            textBox1.ReadOnly = true;
         }
 
         private void akun1_SelectedIndexChanged(object sender, EventArgs e)

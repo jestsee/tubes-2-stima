@@ -75,6 +75,8 @@ namespace tubes2stima
                 {
                     textBox1.AppendText("No path to make a connection");
                     textBox1.Visible = true;
+                    textBox1.ScrollBars = ScrollBars.Vertical;
+                    textBox1.ReadOnly = true;
                 }
                 else
                 {
@@ -93,6 +95,8 @@ namespace tubes2stima
                 {
                     textBox1.AppendText("No path to make a connection");
                     textBox1.Visible = true;
+                    textBox1.ScrollBars = ScrollBars.Vertical;
+                    textBox1.ReadOnly = true;
                 }
                 else
                 {

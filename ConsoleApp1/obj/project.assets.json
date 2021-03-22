@@ -115,19 +115,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\RHEA ELKA PANDUMPI\\.nuget\\packages\\": {}
+    "C:\\Users\\Hanny.LAPTOP-961D8G4P\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\RHEA ELKA PANDUMPI\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectUniqueName": "C:\\Users\\Hanny.LAPTOP-961D8G4P\\Documents\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj",
       "projectName": "ConsoleApp1",
-      "projectPath": "C:\\Users\\RHEA ELKA PANDUMPI\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj",
-      "packagesPath": "C:\\Users\\RHEA ELKA PANDUMPI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\RHEA ELKA PANDUMPI\\tubes-2-stima\\ConsoleApp1\\obj\\",
+      "projectPath": "C:\\Users\\Hanny.LAPTOP-961D8G4P\\Documents\\tubes-2-stima\\ConsoleApp1\\ConsoleApp1.csproj",
+      "packagesPath": "C:\\Users\\Hanny.LAPTOP-961D8G4P\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Hanny.LAPTOP-961D8G4P\\Documents\\tubes-2-stima\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\RHEA ELKA PANDUMPI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hanny.LAPTOP-961D8G4P\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -180,24 +180,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.10, 3.1.10]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x86",
-            "version": "[3.1.13, 3.1.13]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -206,7 +188,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
