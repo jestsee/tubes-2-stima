@@ -70,9 +70,18 @@ namespace tubes2stima
             explore.ShowDialog();
         }
 
-        private void menuToolStripMenuItem_Click(object sender, EventArgs e)
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Help help = new Help();
+            this.Hide();
+            help.ShowDialog();
+        }
 
+        private void aboutUsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            aboutus us = new aboutus();
+            this.Hide();
+            us.ShowDialog();
         }
     }
 }

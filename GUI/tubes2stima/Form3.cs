@@ -128,9 +128,18 @@ namespace tubes2stima
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Help help = new Help();
+            this.Hide();
+            help.ShowDialog();
+        }
 
+        private void aboutUsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            aboutus us = new aboutus();
+            this.Hide();
+            us.ShowDialog();
         }
 
         private void recommendation_Click(object sender, EventArgs e)
