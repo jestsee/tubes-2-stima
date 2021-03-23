@@ -13,26 +13,12 @@ namespace tubes2stima
     {
         public string[] readFile(string fileName)
         {
-            //string currentDir = Environment.CurrentDirectory.ToString();
-            //DirectoryInfo d = new DirectoryInfo(currentDir);
-            //string parentDir = d.Parent.Parent.Parent.Parent.ToString();
-
-            //// alternatif (ganti sama directory file test berada)
-            ////var fileContent = File.ReadAllText(@"C:\sem4\stima\tubes 2\ConsoleApp1\ConsoleApp1\test\" + fileName); 
-            //var newPath = Path.GetFullPath(Path.Combine(parentDir, @"test", fileName));
-            ////Console.WriteLine(newPath);
-            //var fileContent = File.ReadAllText(newPath);
-
-            //var Result = fileContent.Split((string[])null, StringSplitOptions.RemoveEmptyEntries);
-            //return Result;
-
             string currentDir = Environment.CurrentDirectory.ToString();
             DirectoryInfo d = new DirectoryInfo(currentDir);
             //string parentDir = d.Parent.Parent.Parent.Parent.Parent.ToString();
             string parent = System.IO.Directory.GetParent(currentDir).FullName;
             string parentDir = System.IO.Directory.GetParent(parent).FullName;
             // alternatif (ganti sama directory file test berada)
-            /// var fileContent = File.ReadAllText(@"C:\Users\Hanny.LAPTOP-961D8G4P\Documents\tubes-2-stima\GUI\tubes2stima\test\" + fileName);
             var newPath = Path.GetFullPath(Path.Combine(parentDir, @"test", fileName));
             Console.WriteLine(newPath);
             var fileContent = File.ReadAllText(newPath);
@@ -52,7 +38,6 @@ namespace tubes2stima
                     arraystring.Add(item);
                 }
             }
-            //arraystring.ForEach(Console.WriteLine);
 
             // membuat array of integer sebanyak dari 0..N-1
             List<int> arrayint = new List<int>();
@@ -60,17 +45,10 @@ namespace tubes2stima
             {
                 arrayint.Add(i);
             }
-            //arrayint.ForEach(Console.WriteLine);
 
             // mapping nama simpul dengan angka
             var dictionary = arrayint.Zip(arraystring, (k, v) => new { Key = k, Value = v })
                             .ToDictionary(x => x.Key, x => x.Value);
-
-            // mencetak hasil mapping
-            //foreach (var a in dictionary)
-            //    Console.WriteLine("Key : {0}, Value : {1}", a.Key, a.Value);
-            // cara akses dictionary : dictionary[key]
-            //Console.WriteLine(dictionary[1]);
             return dictionary;
         }
     }
@@ -122,22 +100,6 @@ namespace tubes2stima
             this._adj[v].AddLast(u);
         }
 
-        // mencetak daftar simpul yang bertetanggaan dari setiap simpul
-        public void printGraph()
-        {
-            for (int i = 0; i < this._nSimpul; i++)
-            {
-                Console.Write("\nSimpul yang bertetanggan dengan simpul " + _dictionary[i] + " adalah");
-                //Console.Write(myDictionary[i]);
-
-                foreach (var item in _adj[i])
-                {
-                    Console.Write(" {0} ", _dictionary[item]);
-                }
-                Console.WriteLine();
-            }
-        }
-
         // setter
         public void setDict(Dictionary<int, string> dict)
         {
@@ -160,7 +122,6 @@ namespace tubes2stima
 
             for (int i = 0; i < Nmentah; i += 2)
             {
-                //Console.WriteLine("{0}  {1}", i, i + 1);
                 this.addEdge(mentah[i], mentah[i + 1]);
             }
 
@@ -236,8 +197,6 @@ namespace tubes2stima
             int s = g.getKey(start);
             int dest = g.getKey(end);
 
-            //Console.WriteLine("{0} adalah key dari pengguna 1, {1} adalah key dari pengguna 2", s, dest);
-
             int v = g.getNSimpul();
             int[] pred = new int[v];
             int[] dist = new int[v];
@@ -246,7 +205,6 @@ namespace tubes2stima
 
             if (BFS(adj, s, dest, g, pred, dist) == false)
             {
-                Console.WriteLine("Tidak ada jalur koneksi yang tersedia");
                 return path;
             }
 
@@ -259,17 +217,6 @@ namespace tubes2stima
                 path.Add(pred[crawl]);
                 crawl = pred[crawl];
             }
-
-            // Print degree
-            double deg = dist[dest];
-            Console.WriteLine("{0}th degree connection", Math.Ceiling(deg / 2));
-
-            // Print path
-            for (int i = path.Count - 1; i > 0; i--)
-            {
-                Console.Write(g.getDictionary()[path[i]] + " -> ");
-            }
-            Console.Write(g.getDictionary()[path[0]]);
             return path;
         }
 
@@ -294,14 +241,10 @@ namespace tubes2stima
             }
             return tup;
         }
-        public string showMessageBFS(LinkedList<int>[] adj, int start, int end, Graph g, int[] p, int[] d)
+        public string showMessageBFS(string start, string end, Graph g)
         {
             string message="(";
-            int v = g.getNSimpul();
-            int [] pred = new int[v];
-            int [] dist = new int [v];
-            double deg = dist[end];
-            List<int> path = printBFSPath(g.getDictionary()[start], g.getDictionary()[end], g);
+            List<int> path = printBFSPath(start, end, g);
             for (int i =path.Count-1; i > 0; i--)
             {
                 message = message + g.getDictionary()[path[i]] + " -> ";
@@ -331,26 +274,6 @@ namespace tubes2stima
                 }
             }
             DepthFirstSearch(idx, start, destination, route, graph, _visited);
-            if (route.Contains(destination))
-            {
-                foreach (var a in route)
-                {
-                    if (!Equals(a, destination))
-                    {
-                        Console.Write(a + "->");
-                    }
-                    else
-                    {
-                        Console.WriteLine(a);
-                    }
-                    degreeConnection++;
-                }
-                Console.WriteLine(degreeConnection - 2 + "-th connection"); // use converter later for st, nd, rd, th...
-            }
-            else
-            {
-                Console.WriteLine("No connection");
-            }
         }
 
         public List<string> StartDFS1(string start, string destination, Graph graph)
@@ -370,26 +293,6 @@ namespace tubes2stima
                 }
             }
             DepthFirstSearch(idx, start, destination, route, graph, _visited);
-            if (route.Contains(destination))
-            {
-                foreach (var a in route)
-                {
-                    if (!Equals(a, destination))
-                    {
-                        Console.Write(a + "->");
-                    }
-                    else
-                    {
-                        Console.WriteLine(a);
-                    }
-                    degreeConnection++;
-                }
-                Console.WriteLine(degreeConnection - 2 + "-th connection"); // use converter later for st, nd, rd, th...
-            }
-            else
-            {
-                Console.WriteLine("No connection");
-            }
             return route;
         }
 
@@ -414,9 +317,8 @@ namespace tubes2stima
         }
         public string showMessageDFS(string start, string destination, Graph graph)
         {
-            string message="";
+            string message="(";
             int degreeConnection = 0;
-            message = message + "(";
             foreach (var a in StartDFS1(start, destination, graph))
             {
                 if (!Equals(a, destination))
@@ -452,7 +354,6 @@ namespace tubes2stima
         {
             DFS dfs = new DFS();
             string message = "";
-            //LinkedList<int>[] mutual = new LinkedList<int>[BanyakAkun];
             int[] BanyakMutual = new int[BanyakAkun];
             int idx = 0;
             string value = "";
@@ -465,24 +366,15 @@ namespace tubes2stima
                     break;
                 }
             }
-            //for (int i = 0; i< BanyakAkun; i++)
-            //{
-            //    mutual[i] = new LinkedList<int>();
-            //}
-
             for (int i = 0; i < BanyakAkun; i++)
             {
                 BanyakMutual[i] = 0;
             }
-            //Console.WriteLine("Simpul " + graph.getDictionary()[idx] + " bertetangga dengan ");
             foreach (var node in graph.getAdjacent()[idx])
             {
-                //Console.WriteLine(graph.getDictionary()[node] + " dan mutual dengan ");
                 foreach (var tetangga in graph.getAdjacent()[node])
                 {
-                    //mutual[tetangga].AddLast(node);
                     BanyakMutual[tetangga]++;
-                    //Console.WriteLine(graph.getDictionary()[tetangga] + " ");
                 }
             }
 
@@ -491,21 +383,6 @@ namespace tubes2stima
             {
                 BanyakMutual[node] = 0;
             }
-
-            //foreach (var node in mutual)
-            //{
-            //    foreach (var tetangga in mutual.)
-            //    {
-            //        Console.WriteLine(graph.getDictionary()[tetangga]);
-            //    }
-            //}
-
-            //print banyak mutual
-            //for (int i = 0; i < BanyakAkun; i++)
-            //{
-            //    Console.WriteLine(graph.getDictionary()[i] + " banyak mutualfriend : " + BanyakMutual[i]);
-            //}
-
             //ambil dari nilai yang terbesar
             BFSsearch bfs = new BFSsearch();
             int v = graph.getNSimpul();
@@ -524,7 +401,8 @@ namespace tubes2stima
                     bfs.BFS(adj, s, dest, graph, pred, dist);
                     // Print path
                     double deg = dist[dest];
-                    string c = bfs.showMessageBFS(adj, s, dest, graph, pred, dist);
+                    List <int> path = bfs.printBFSPath(Akun,graph.getDictionary()[idxmax], graph);
+                    string c = bfs.showMessageBFS(Akun,graph.getDictionary()[idxmax], graph);
                     message = message + c + "," + (Math.Ceiling(deg / 2)) + "-th degree)\r\n";
                 }
                 else

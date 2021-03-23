@@ -81,7 +81,7 @@ namespace tubes2stima
                 else
                 {
                     Visualization vis = new Visualization();
-                    string message=bfs.showMessageBFS(adj, s, dest, g, pred, dist);
+                    string message=bfs.showMessageBFS(AkunTerpilih1, AkunTerpilih2,g);
                     double deg = dist[dest];
                     message = message + "," + (Math.Ceiling(deg / 2)) + "-th degree)\r\n";
                     textBox1.AppendText(message);

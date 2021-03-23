@@ -68,3 +68,5 @@ C:\Users\RHEA ELKA PANDUMPI\tubes-2-stima\GUI\tubes2stima\obj\Debug\tubes2stima.
 C:\Users\RHEA ELKA PANDUMPI\tubes-2-stima\GUI\tubes2stima\obj\Debug\tubes2stima.pdb
 C:\Users\Hanny.LAPTOP-961D8G4P\Documents\tubes-2-stima\GUI\tubes2stima\obj\Debug\tubes2stima.Help.resources
 C:\Users\Hanny.LAPTOP-961D8G4P\Documents\tubes-2-stima\GUI\tubes2stima\obj\Debug\tubes2stima.aboutus.resources
+C:\Users\RHEA ELKA PANDUMPI\tubes-2-stima\GUI\tubes2stima\obj\Debug\tubes2stima.Help.resources
+C:\Users\RHEA ELKA PANDUMPI\tubes-2-stima\GUI\tubes2stima\obj\Debug\tubes2stima.aboutus.resources
