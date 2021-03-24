@@ -329,7 +329,7 @@ namespace tubes2stima
                 }
                 else
                 {
-                    if(degreeConnection>2)
+                    if(degreeConnection>1)
                     {
                         message = message + a +"," + (degreeConnection-1) + "-th degree)\r\n";
                     }
