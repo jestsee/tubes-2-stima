@@ -262,7 +262,6 @@ namespace tubes2stima
             List<string> route = new List<string>();
             var _visited = new HashSet<string>();
             int idx = 0;
-            int degreeConnection = 0;
             string value = "";
             foreach (var a in graph.getDictionary())
             {
@@ -281,7 +280,6 @@ namespace tubes2stima
             List<string> route = new List<string>();
             var _visited = new HashSet<string>();
             int idx = 0;
-            int degreeConnection = 0;
             string value = "";
             foreach (var a in graph.getDictionary())
             {
@@ -304,10 +302,14 @@ namespace tubes2stima
                 route.Add(start);
                 foreach (var b in graph.getAdjacent()[i])
                 {
-                    if (!_visited.Contains(graph.getDictionary()[b]))
+                    if(!_visited.Contains(graph.getDictionary()[b]))
                     {
                         DepthFirstSearch(b, graph.getDictionary()[b], destination, route, graph, _visited);
                     }
+                }
+                if(!_visited.Contains(destination))
+                {
+                    route.Remove(start);
                 }
             }
             if (Equals(start, destination))
@@ -327,7 +329,14 @@ namespace tubes2stima
                 }
                 else
                 {
-                    message = message + a +"," + degreeConnection + "-th degree)\r\n";
+                    if(degreeConnection>2)
+                    {
+                        message = message + a +"," + (degreeConnection-1) + "-th degree)\r\n";
+                    }
+                    else
+                    {
+                        message = message + a +"," + degreeConnection + "-th degree)\r\n";
+                    }
                 }
                 degreeConnection++;
             }

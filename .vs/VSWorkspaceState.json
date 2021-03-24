@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\GUI",
+    "\\GUI\\tubes2stima"
   ],
-  "SelectedNode": "\\ConsoleApp1.sln",
+  "SelectedNode": "\\GUI\\tubes2stima\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
