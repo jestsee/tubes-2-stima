@@ -403,9 +403,11 @@ namespace tubes2stima
             int idxmax = GetMax(BanyakMutual, BanyakAkun);
             while (BanyakMutual[idxmax] != 0)
             {
-                message = message + "\r\nNama Akun: \r\n" + graph.getDictionary()[idxmax] ;
+                message = message + "\r\nNama Akun: " + graph.getDictionary()[idxmax] + "\r\n";
+                message = message + "Jalur explore dengan ";
                 if (algo == 1) //dengan algortima BFS
                 {
+                    message = message + "BFS : ";
                     int dest = graph.getKey(graph.getDictionary()[idxmax]);
                     bfs.BFS(adj, s, dest, graph, pred, dist);
                     // Print path
@@ -416,6 +418,7 @@ namespace tubes2stima
                 }
                 else
                 {
+                    message = message + "DFS : ";
                     dfs.StartDFS(Akun, graph.getDictionary()[idxmax], graph);
                     string c = dfs.showMessageDFS(Akun, graph.getDictionary()[idxmax], graph);
                     message = message + c;

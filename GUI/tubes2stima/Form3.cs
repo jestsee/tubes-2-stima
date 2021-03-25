@@ -21,6 +21,7 @@ namespace tubes2stima
         {
             InitializeComponent();
             textBox1.Visible = false;
+            gViewer1.Visible = false;
             g = graf;
             dic = dictionary;
             algorithm = algo;
@@ -50,7 +51,8 @@ namespace tubes2stima
         }
 
         private void submit1_Click(object sender, EventArgs e)
-        { 
+        {
+            gViewer1.Visible = true;
             FileHandler f = new FileHandler();
             var Result = f.readFile(fn);
             int N = (from x in Result select x).Distinct().Count();

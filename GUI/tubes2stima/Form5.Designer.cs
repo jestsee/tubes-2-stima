@@ -33,11 +33,11 @@ namespace tubes2stima
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Main = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -77,19 +77,6 @@ namespace tubes2stima
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(804, 55);
             this.panel1.TabIndex = 15;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Firebrick;
-            this.label1.Font = new System.Drawing.Font("Snap ITC", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(279, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 35);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nama Aplikasi";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel2
             // 
@@ -137,6 +124,19 @@ namespace tubes2stima
             this.label2.Text = "\r\nWindow Form ini dirancang dan dibuat oleh : \r\n    1. Jesica (13519011)\r\n    2. " +
     "Rhea Elka Pandumpi (13519047)\r\n    3. Nabila Hannania (13519097)\r\n\r\n\r\n";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Firebrick;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(323, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 31);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "FS - BOOK";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // aboutus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,10 +167,10 @@ namespace tubes2stima
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutUsToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button Main;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

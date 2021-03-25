@@ -120,4 +120,20 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="label2.Text" xml:space="preserve">
+    <value>
+Petunjuk Penggunaan : 
+1.  Pertama masuk ke page Main Menu
+2.  Tuliskan nama file yang akan dibaca
+3. Tekan tombol submit. Lalu akan muncul visualisasi graf dari persoalan
+4. Jika ingin melihat rekomendasi teman masuk ke page Friend Recommendation
+5. Masukkan akun yang akan dicari daftar rekomendasinya
+6. Tekan tombol submit. Lalu akan muncul daftar rekomendasi teman untuk akun tersebut
+7. Jika ingin melihat explore teman 
+8. Masukkan akun pertama dan akun kedua
+9. Tekan tombol submit. Lalu akan ditampilkan visualisasi graf 
+     dengan jalur akun pertama ke akun kedua
+
+</value>
+  </data>
 </root>

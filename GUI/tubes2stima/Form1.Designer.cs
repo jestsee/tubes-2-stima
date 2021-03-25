@@ -47,6 +47,7 @@ namespace tubes2stima
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gViewer1 = new Microsoft.Msagl.GraphViewerGdi.GViewer();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -57,16 +58,17 @@ namespace tubes2stima
             this.label1.BackColor = System.Drawing.Color.Firebrick;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(268, 27);
+            this.label1.Location = new System.Drawing.Point(314, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 31);
+            this.label1.Size = new System.Drawing.Size(159, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Nama Aplikasi";
+            this.label1.Text = "FS - BOOK";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Firebrick;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-3, 22);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(804, 55);
@@ -240,7 +242,7 @@ namespace tubes2stima
             this.gViewer1.InsertingEdge = false;
             this.gViewer1.LayoutAlgorithmSettingsButtonVisible = true;
             this.gViewer1.LayoutEditingEnabled = true;
-            this.gViewer1.Location = new System.Drawing.Point(97, 199);
+            this.gViewer1.Location = new System.Drawing.Point(158, 214);
             this.gViewer1.LooseOffsetForRouting = 0.25D;
             this.gViewer1.MouseHitDistance = 0.05D;
             this.gViewer1.Name = "gViewer1";
@@ -254,7 +256,7 @@ namespace tubes2stima
             this.gViewer1.SaveButtonVisible = true;
             this.gViewer1.SaveGraphButtonVisible = true;
             this.gViewer1.SaveInVectorFormatEnabled = true;
-            this.gViewer1.Size = new System.Drawing.Size(407, 179);
+            this.gViewer1.Size = new System.Drawing.Size(500, 280);
             this.gViewer1.TabIndex = 14;
             this.gViewer1.TightOffsetForRouting = 0.125D;
             this.gViewer1.ToolBarIsVisible = true;
@@ -281,11 +283,12 @@ namespace tubes2stima
             this.Controls.Add(this.label3);
             this.Controls.Add(this.file);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nama Aplikasi";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);

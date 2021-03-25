@@ -23,11 +23,12 @@ namespace tubes2stima
             InitializeComponent();
             //g = graf;
             //dic = dictionary;
+            gViewer1.Visible = false;
         }
 
         private void submit1_Click(object sender, EventArgs e)
         {
-          
+            gViewer1.Visible = true;
             filename = file.Text;
             if (bfsbutton.Checked)
             {
