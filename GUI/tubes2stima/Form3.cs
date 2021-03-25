@@ -88,7 +88,7 @@ namespace tubes2stima
                     textBox1.Visible = true;
                     textBox1.ReadOnly = true;
                     //this.Hide();
-                    vis.drawRoute(Result, g, path);
+                    vis.drawRoute(Result, g, path,gViewer1);
                 }
             }
             else
@@ -111,7 +111,7 @@ namespace tubes2stima
                     textBox1.Visible = true;
                     textBox1.ReadOnly = true;
                     //this.Hide();
-                    vis.drawRoute(Result,g,route);
+                    vis.drawRoute(Result,g,route,gViewer1);
                 }
             }
         }
@@ -140,6 +140,11 @@ namespace tubes2stima
             aboutus us = new aboutus();
             this.Hide();
             us.ShowDialog();
+        }
+
+        private void gViewer1_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void recommendation_Click(object sender, EventArgs e)

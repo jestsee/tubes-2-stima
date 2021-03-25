@@ -468,7 +468,7 @@ namespace tubes2stima
             form.ShowDialog();
         }
 
-        public void drawRoute(string[] mentah, Graph g, List<int> bfsint)
+        public void drawRoute(string[] mentah, Graph g, List<int> bfsint, Microsoft.Msagl.GraphViewerGdi.GViewer viewer)
         {
             BFSsearch test = new BFSsearch();
             List<string> test2 = test.getStringPath(bfsint, g);
@@ -480,7 +480,7 @@ namespace tubes2stima
             // create a form 
             System.Windows.Forms.Form form = new System.Windows.Forms.Form();
             // create a viewer object 
-            Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
+            //Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
             // create graph
             Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("ini adalah graph");
 
@@ -519,16 +519,16 @@ namespace tubes2stima
             }
             viewer.Graph = graph;
             //associate the viewer with the form 
-            form.SuspendLayout();
-            viewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            form.Controls.Add(viewer);
-            form.ResumeLayout();
+            //form.SuspendLayout();
+            //viewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            //form.Controls.Add(viewer);
+            //form.ResumeLayout();
             //show the form 
-            form.ShowDialog();
+            //form.ShowDialog();
 
         }
 
-        public void drawRoute(string[] mentah, Graph g, List<string> route)
+        public void drawRoute(string[] mentah, Graph g, List<string> route, Microsoft.Msagl.GraphViewerGdi.GViewer viewer)
         {
             BFSsearch test = new BFSsearch();
             var lp = test.listOfPath(route);
@@ -537,9 +537,9 @@ namespace tubes2stima
             var lp2 = g.edgeTuple(stringmentah);
 
             // create a form 
-            System.Windows.Forms.Form f = new System.Windows.Forms.Form();
+            //System.Windows.Forms.Form f = new System.Windows.Forms.Form();
             // create a viewer object 
-            Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
+            //Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
             // create graph
             Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("ini adalah graph");
 
@@ -585,22 +585,22 @@ namespace tubes2stima
             }
             viewer.Graph = graph;
             //associate the viewer with the form 
-            f.SuspendLayout();
-            viewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            f.Controls.Add(viewer);
-            f.ResumeLayout();
+            //f.SuspendLayout();
+            //viewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            //f.Controls.Add(viewer);
+            //f.ResumeLayout();
             //show the form 
-            f.ShowDialog();
+            //f.ShowDialog();
         }
 
-        public void drawGraph(string[] result)
+        public void drawGraph(string[] result, Microsoft.Msagl.GraphViewerGdi.GViewer viewer)
         {
             List<string> list = new List<string>(result);
             var n = list.Count;
             // create a form 
-            System.Windows.Forms.Form form = new System.Windows.Forms.Form();
+            //System.Windows.Forms.Form form = new System.Windows.Forms.Form();
             // create a viewer object 
-            Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
+            //Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
             // create graph
             Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("ini adalah graph");
 
@@ -623,12 +623,12 @@ namespace tubes2stima
             }
             viewer.Graph = graph;
             //associate the viewer with the form 
-            form.SuspendLayout();
-            viewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            form.Controls.Add(viewer);
-            form.ResumeLayout();
+            //form.SuspendLayout();
+            //viewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            //form.Controls.Add(viewer);
+            //form.ResumeLayout();
             //show the form 
-            form.ShowDialog();
+            //form.ShowDialog();
         }
 
     }
