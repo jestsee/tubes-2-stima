@@ -88,7 +88,7 @@ namespace tubes2stima
                     textBox1.Visible = true;
                     textBox1.ReadOnly = true;
                     //this.Hide();
-                    vis.drawRoute(Result, g, path, form);
+                    vis.drawRoute(Result, g, path);
                 }
             }
             else
@@ -111,7 +111,7 @@ namespace tubes2stima
                     textBox1.Visible = true;
                     textBox1.ReadOnly = true;
                     //this.Hide();
-                    vis.drawRoute(Result,g,route,form);
+                    vis.drawRoute(Result,g,route);
                 }
             }
         }

@@ -70,3 +70,5 @@ C:\Users\Hanny.LAPTOP-961D8G4P\Documents\tubes-2-stima\GUI\tubes2stima\obj\Debug
 C:\Users\Hanny.LAPTOP-961D8G4P\Documents\tubes-2-stima\GUI\tubes2stima\obj\Debug\tubes2stima.aboutus.resources
 C:\Users\RHEA ELKA PANDUMPI\tubes-2-stima\GUI\tubes2stima\obj\Debug\tubes2stima.Help.resources
 C:\Users\RHEA ELKA PANDUMPI\tubes-2-stima\GUI\tubes2stima\obj\Debug\tubes2stima.aboutus.resources
+C:\sem4\stima\tubes 2\tubes-2-stima\GUI\tubes2stima\obj\Debug\tubes2stima.Help.resources
+C:\sem4\stima\tubes 2\tubes-2-stima\GUI\tubes2stima\obj\Debug\tubes2stima.aboutus.resources

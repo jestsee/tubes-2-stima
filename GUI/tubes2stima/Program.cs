@@ -468,7 +468,7 @@ namespace tubes2stima
             form.ShowDialog();
         }
 
-        public void drawRoute(string[] mentah, Graph g, List<int> bfsint, Form form)
+        public void drawRoute(string[] mentah, Graph g, List<int> bfsint)
         {
             BFSsearch test = new BFSsearch();
             List<string> test2 = test.getStringPath(bfsint, g);
@@ -478,7 +478,7 @@ namespace tubes2stima
             var lp2 = g.edgeTuple(stringmentah);
 
             // create a form 
-            //System.Windows.Forms.Form form = new System.Windows.Forms.Form();
+            System.Windows.Forms.Form form = new System.Windows.Forms.Form();
             // create a viewer object 
             Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
             // create graph
@@ -528,7 +528,7 @@ namespace tubes2stima
 
         }
 
-        public void drawRoute(string[] mentah, Graph g, List<string> route, Form f)
+        public void drawRoute(string[] mentah, Graph g, List<string> route)
         {
             BFSsearch test = new BFSsearch();
             var lp = test.listOfPath(route);
@@ -537,7 +537,7 @@ namespace tubes2stima
             var lp2 = g.edgeTuple(stringmentah);
 
             // create a form 
-            System.Windows.Forms.Form form = new System.Windows.Forms.Form();
+            System.Windows.Forms.Form f = new System.Windows.Forms.Form();
             // create a viewer object 
             Microsoft.Msagl.GraphViewerGdi.GViewer viewer = new Microsoft.Msagl.GraphViewerGdi.GViewer();
             // create graph
@@ -631,29 +631,6 @@ namespace tubes2stima
             form.ShowDialog();
         }
 
-        public Microsoft.Msagl.Drawing.Edge findEdge(string src, string target,
-            Microsoft.Msagl.Drawing.Graph graph)
-        {
-            Microsoft.Msagl.Drawing.Node srcNode = graph.FindNode(src);
-            Microsoft.Msagl.Drawing.Node targetNode = graph.FindNode(target);
-
-            // inisialisasi edge
-            Microsoft.Msagl.Drawing.Edge de = null;
-
-            // find edge
-            foreach (Microsoft.Msagl.Drawing.Edge e in srcNode.Edges)
-            {
-                foreach (Microsoft.Msagl.Drawing.Edge ed in targetNode.Edges)
-                {
-                    if (Equals(e, ed))
-                    {
-                        de = e;
-                        break;
-                    }
-                }
-            }
-            return de;
-        }
     }
     static class Program
     {
