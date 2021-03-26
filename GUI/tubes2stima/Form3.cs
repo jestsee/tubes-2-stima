@@ -21,7 +21,7 @@ namespace tubes2stima
         {
             InitializeComponent();
             textBox1.Visible = false;
-            gViewer1.Visible = false;
+            //gViewer1.Visible = false;
             g = graf;
             dic = dictionary;
             algorithm = algo;
@@ -52,7 +52,7 @@ namespace tubes2stima
 
         private void submit1_Click(object sender, EventArgs e)
         {
-            gViewer1.Visible = true;
+            //gViewer1.Visible = true;
             FileHandler f = new FileHandler();
             var Result = f.readFile(fn);
             int N = (from x in Result select x).Distinct().Count();
@@ -75,7 +75,7 @@ namespace tubes2stima
                 List <int> path = bfs.printBFSPath(AkunTerpilih1,AkunTerpilih2, g);
                 if (bfs.BFS(adj, s, dest, g, pred, dist) == false)
                 {
-                    textBox1.AppendText("No path to make a connection");
+                    textBox1.Text = "No path to make a connection";
                     textBox1.Visible = true;
                     textBox1.ScrollBars = ScrollBars.Vertical;
                     textBox1.ReadOnly = true;
@@ -86,7 +86,7 @@ namespace tubes2stima
                     string message=bfs.showMessageBFS(AkunTerpilih1, AkunTerpilih2,g);
                     double deg = dist[dest];
                     message = message + "," + (Math.Ceiling(deg / 2)) + "-th degree)\r\n";
-                    textBox1.AppendText(message);
+                    textBox1.Text = message;
                     textBox1.Visible = true;
                     textBox1.ReadOnly = true;
                     //this.Hide();
