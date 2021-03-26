@@ -11,8 +11,8 @@ Akun direpresentasikan sebagai simpul, pertemanan sebagai sisi, koneksi antar ak
 Pada file eksternal, akun yang tertulis di sebelah akun yang lainnya memiliki hubungan pertemanan dengan akun tersebut.
 
 Elemen-elemen algoritma:
-1. Jalur awal: akun pertama
-2. Jalur tujuan: akun yang dicari koneksinya (semua akun pada file eksternal/semua simpul pada graf)
+1. Simpul awal: akun pertama
+2. Simpul tujuan: akun yang dicari koneksinya (semua akun pada file eksternal/semua simpul pada graf)
 3. Rute: jalur yang dilalui antar akun
 
 Dengan pendekatan BFS, yang dikunjungi adalah semua simpul yang bertetangga dengan simpul awal terlebih dahulu.
@@ -30,7 +30,7 @@ Program dijalankan pada sistem operasi Windows.
 ==============================
 
 1. Buka folder pada Visual Studio
-2. Buka file Program.cs pada folder GUI > tubes2 stima > test.
+2. Buka file Program.cs pada folder src/tubes2stima
 3. Jalankan program.
 4. Tuliskan nama file teks eksternal yang akan divisualisasi dalam bentuk graf.
 5. Pilih algoritma BFS atau DFS untuk menggunakan menu lanjutan.
