@@ -192,30 +192,29 @@ namespace tubes2stima
             return false;
         }
 
-        public List<int> printBFSPath(string start, string end, Graph g)
+        public List<int> BFSPath(string start, string end, Graph g)
         {
             int s = g.getKey(start);
             int dest = g.getKey(end);
 
-            int v = g.getNSimpul();
-            int[] pred = new int[v];
-            int[] dist = new int[v];
+            int[] p = new int[g.getNSimpul()];
+            int[] d = new int[g.getNSimpul()];
             LinkedList<int>[] adj = g.getAdjacent();
             List<int> path = new List<int>();
-
-            if (BFS(adj, s, dest, g, pred, dist) == false)
+            // tidak ditemukan jalur
+            if (BFS(adj, s, dest, g, p, d) == false)
             {
                 return path;
             }
-
-            
-            int crawl = dest;
-            path.Add(crawl);
-
-            while (pred[crawl] != -1)
+            // melakukan track thd predesesor dari simpul
+            int track = dest;
+            path.Add(track);
+            // track terus dilakukan sampai sebuah node tidak
+            // memiliki predesesor lagi
+            while (p[track] != -1)
             {
-                path.Add(pred[crawl]);
-                crawl = pred[crawl];
+                path.Add(p[track]);
+                track = p[track];
             }
             return path;
         }
@@ -244,7 +243,7 @@ namespace tubes2stima
         public string showMessageBFS(string start, string end, Graph g)
         {
             string message="(";
-            List<int> path = printBFSPath(start, end, g);
+            List<int> path = BFSPath(start, end, g);
             for (int i =path.Count-1; i > 0; i--)
             {
                 message = message + g.getDictionary()[path[i]] + " -> ";
@@ -412,7 +411,7 @@ namespace tubes2stima
                     bfs.BFS(adj, s, dest, graph, pred, dist);
                     // Print path
                     double deg = dist[dest];
-                    List <int> path = bfs.printBFSPath(Akun,graph.getDictionary()[idxmax], graph);
+                    List <int> path = bfs.BFSPath(Akun,graph.getDictionary()[idxmax], graph);
                     string c = bfs.showMessageBFS(Akun,graph.getDictionary()[idxmax], graph);
                     message = message + c + "," + (Math.Ceiling(deg / 2)) + "-th degree)\r\n";
                 }

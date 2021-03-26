@@ -72,7 +72,7 @@ namespace tubes2stima
                 int [] dist = new int [v];
                 LinkedList<int>[] adj=g.getAdjacent();
                 bfs.BFS(adj, s, dest,g,pred,dist);
-                List <int> path = bfs.printBFSPath(AkunTerpilih1,AkunTerpilih2, g);
+                List <int> path = bfs.BFSPath(AkunTerpilih1,AkunTerpilih2, g);
                 if (bfs.BFS(adj, s, dest, g, pred, dist) == false)
                 {
                     textBox1.Text = "No path to make a connection";
